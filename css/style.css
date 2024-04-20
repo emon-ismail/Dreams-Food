@@ -74,8 +74,8 @@ h4 {
 /* The sidepanel menu */
 .sidepanel {
     height: 100%; /* Specify a height */
-    height:50vh;
-    overflow-y: auto;
+    /* height:50vh;
+    overflow-y: auto; */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
