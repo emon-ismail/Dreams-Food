@@ -61,13 +61,21 @@ h4 {
 .cart{
     width: 40px;
 }
-
+.cart-added-name{
+  font-size: medium;
+  font-weight: bold;
+}
+.cart-added-individual-price{
+  font-size: 10px;
+}
 
 
 
 /* The sidepanel menu */
 .sidepanel {
-    height: auto; /* Specify a height */
+    height: 100%; /* Specify a height */
+    height:50vh;
+    overflow-y: auto;
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
