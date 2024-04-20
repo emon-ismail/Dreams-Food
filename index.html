@@ -7,31 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/js/index.js"></script>
     <title>Bootstrap Admin Dashboard</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Utility/Css/bootstrap.min.css">
+    <script src="/Utility/js/Fontawesome.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
         
 <section> 
-    <nav class=" navbar navbar-expand  border-bottom" style="color:black">
+    <nav class=" navbar navbar-expand  border-bottom" >
          <div class="sidebar-logo">
                     <a href="#">Dreams Food</a>
                 </div>
         <button class=" btn  "   id="sidebar-toggle" type="button">
             <!-- <span class="navbar-toggler-icon" ></span> -->
-            <img class=" navbar-toggler-icon" src="/image/ham.svg" alt="">
+            <img class=" navbar-toggler-icon" src="Assets/image/ham.svg" alt="">
         </button>
         <form class="ms-5">
             <input type="text" name="search" placeholder="Search..">
           </form>
         <div class="navbar-collapse navbar" >
-            <ul class="navbar-nav" >
-                <img class="me-5 cart" src="/image/cart2.png" alt="">
-                <li class="nav-item dropdown" >
-                    <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0" >
-                        <img src="image/profile.svg" class="avatar img-fluid rounded me-5" alt="">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                        <img src="Assets/image/profile.svg" class="avatar img-fluid rounded me-5" alt="">
                     </a>
                     <div class="dropdown-menu dropdown-menu-end">
                         <a href="#" class="dropdown-item">Profile</a>
@@ -39,7 +39,15 @@
                         <a href="#" class="dropdown-item">Logout</a>
                     </div>
                 </li>
+                <li class="cart-container  container ">
+                   <div class="d-flex align-content-between  ">
+                    <button class="place-order--btn px-5">Place Order</button>
+                    <button class="btn" href="#"><img class=" cart" src="Assets/image/cart2.png" alt=""></button>
+                    
+                   </div>
+                </li>
             </ul>
+            
         </div>
     </nav>
 </section>
@@ -129,14 +137,14 @@
         <div class="main">
          
             <main class="content px-3 py-2" >
-                <img class="w-auto" src="/image/Screenshot 2024-04-19 222523.png" alt="">
+                <img class="img-fluid " src="Assets/Delete/Screenshot 2024-04-19 222523.png" alt="">
                 <div>
                     <h5 class="mt-4 text-dark">
                         Flash Sales
 
                     </h5>
                     
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="row row-cols-1 row-cols-md-3 g-4  card-main">
                         <div class="col">
                           <div class="card h-100">
                             <img src="..." class="card-img-top" alt="...">
@@ -178,7 +186,7 @@
               
             </main>
            
-            <footer class="footer">
+            <!-- <footer class="footer">
                 <div class="container-fluid">
                     <div class="row text-muted">
                         <div class="col-6 text-start">
@@ -206,7 +214,7 @@
                         </div>
                     </div>
                 </div>
-            </footer>
+            </footer> -->
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
