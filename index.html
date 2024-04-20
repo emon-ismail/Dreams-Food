@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/js/index.js"></script>
-    <title>Bootstrap Admin Dashboard</title>
+    <title>Dreams Food</title>
 
     <link rel="stylesheet" href="/Utility/Css/bootstrap.min.css">
+
     <script src="/Utility/js/Fontawesome.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -29,7 +30,7 @@
           </form>
         <div class="navbar-collapse navbar" >
             <ul class="navbar-nav">
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                     <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
                         <img src="Assets/image/profile.svg" class="avatar img-fluid rounded me-5" alt="">
                     </a>
@@ -38,15 +39,61 @@
                         <a href="#" class="dropdown-item">Setting</a>
                         <a href="#" class="dropdown-item">Logout</a>
                     </div>
+                </li> -->
+                <li>
+                    <button class="btn btn-danger mt-2  " style="margin-right: 40px;">LogIn</button>
                 </li>
                 <li class="cart-container  container ">
                    <div class="d-flex align-content-between  ">
-                    <button class="place-order--btn px-5">Place Order</button>
-                    <button class="btn" href="#"><img class=" cart" src="Assets/image/cart2.png" alt=""></button>
+                    <!-- <button class="place-order--btn px-5">Place Order</button> -->
+                    <button style="margin-right: 150px;" class="openbtn btn position-relative" onclick="openNav()" 
+                      href="#"  >
+                      <img class=" cart" src="Assets/image/bag.png" alt="" ><span 
+                      class="position-absolute top-0 start-100 translate-middle badge
+                       rounded-2 bg-dark mt-2 h2 text-light ">99</span></button>
                     
                    </div>
                 </li>
+
+
+              
             </ul>
+
+            <div id="mySidepanel" class="sidepanel ">
+                <div class="d-flex p-2 mb-3">
+                    
+                <a href="javascript:void(0)" class="closebtn  " onclick="closeNav()"><button 
+                    class=" btn btn-outline-success ">Close</button></a>
+                </div>
+               
+               <div class="d-flex justify-content-evenly">
+                <div>
+                    <p>+</p>
+                <p>-</p>
+                </div>
+
+                <img class="w-25" src="/Assets/Delete/egg.jpg" alt="">
+
+                <div>
+                    <p>Eggs</p>
+                    <p>$9 / 12 pcs</p>
+                </div>
+                <div>
+                    <p>$108</p>
+                    <p>$120</p>
+                </div>
+                <p>❌</p>
+
+                
+
+               </div>
+
+               <div class="d-flex justify-content-between container mt-3">
+                <button class="">Place Order</button>
+               <p>Total: $200</p>
+               </div>
+
+              </div>
             
         </div>
     </nav>
@@ -58,27 +105,31 @@
             <div class="h-100">
                 <div class="sidebar-logo">
                     <!-- <a href="#">Dreams Food</a> -->
-                    <div class="d-flex justify-content-evenly ">
-                        <button>Grocery</button>
-                        <button>Grocery</button>
-                        <button>Grocery</button>
+                    <div class="d-flex justify-content-evenly gap-2 ">
+                        <button class="btn btn-outline-success btn-sm " style="font-size: 12px;" >Grocery</button>
+                        <button class="btn  btn-outline-success btn-sm"style="font-size: 12px;" >Pharmacy</button>
+                        <button class=" btn btn-outline-success btn-sm"  style="font-size: 12px;">Cookups</button>
                     
                     </div>
                 </div>
                 <ul class="sidebar-nav">
-                    <li class="sidebar-header">
-                        Admin Elements
+                   
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link">
+                            <i class="fa-solid fa-list pe-2"></i>
+                            Offers
+                        </a>
                     </li>
                     <li class="sidebar-item">
                         <a href="#" class="sidebar-link">
                             <i class="fa-solid fa-list pe-2"></i>
-                            Dashboard
+                            Deal of the day
                         </a>
                     </li>
                     <li class="sidebar-item">
                         <a href="#" class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"
                             aria-expanded="false"><i class="fa-solid fa-file-lines pe-2"></i>
-                            Pages
+                           Favourites
                         </a>
                         <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                            
@@ -93,7 +144,63 @@
                     <li class="sidebar-item">
                         <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
                             aria-expanded="false"><i class="fa-solid fa-sliders pe-2"></i>
-                            Posts
+                           Food
+                        </a>
+                        <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Post 1</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Post 2</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Post 3</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-solid fa-sliders pe-2"></i>
+                           Food
+                        </a>
+                        <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Post 1</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Post 2</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Post 3</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-solid fa-sliders pe-2"></i>
+                           Food
+                        </a>
+                        <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Post 1</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Post 2</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Post 3</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-solid fa-sliders pe-2"></i>
+                           Food
                         </a>
                         <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item">
@@ -108,18 +215,16 @@
                         </ul>
                     </li>
                  
-                    <li class="sidebar-header">
-                        Multi Level Menu
-                    </li>
+                
                     <li class="sidebar-item">
                         <a href="#" class="sidebar-link collapsed" data-bs-target="#multi" data-bs-toggle="collapse"
                             aria-expanded="false"><i class="fa-solid fa-share-nodes pe-2"></i>
-                            Multi Dropdown
+                           Meat & Fish
                         </a>
                         <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item">
                                 <a href="#" class="sidebar-link collapsed" data-bs-target="#level-1"
-                                    data-bs-toggle="collapse" aria-expanded="false">Level 1</a>
+                                    data-bs-toggle="collapse" aria-expanded="false">Frozen Fish</a>
                                 <ul id="level-1" class="sidebar-dropdown list-unstyled collapse">
                                     <li class="sidebar-item">
                                         <a href="#" class="sidebar-link">Level 1.1</a>
@@ -144,43 +249,62 @@
 
                     </h5>
                     
-                    <div class="row row-cols-1 row-cols-md-3 g-4  card-main">
-                        <div class="col">
-                          <div class="card h-100">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                          </div>
+                    <div class="row row-cols-2 row-cols-md-5   card-main">
+                        <div class="col ">
+                            <div class="card">
+                                <img src="/Assets/Delete/egg.jpg" alt="Denim Jeans" style="width:100%">
+                                <h5 class="mt-2">Chicken Eggs</h5>
+                                <p>12 pcs</p>
+                                <p class="price">$19.99</p>
+                                
+                                <p><button>Add to bag</button></p>
+                              </div>
                         </div>
-                        <div class="col">
-                          <div class="card h-100">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This is a short card.</p>
-                            </div>
-                          </div>
+                        <div class="col ">
+                            <div class="card">
+                                <img src="/Assets/Delete/egg.jpg" alt="Denim Jeans" style="width:100%">
+                                <h5 class="mt-2">Chicken Eggs</h5>
+                                <p>12 pcs</p>
+                                <p class="price">$19.99</p>
+                                
+                                <p><button>Add to bag</button></p>
+                              </div>
                         </div>
-                        <div class="col">
-                          <div class="card h-100">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                            </div>
-                          </div>
+                        <div class="col ">
+                            <div class="card">
+                                <img src="/Assets/Delete/egg.jpg" alt="Denim Jeans" style="width:100%">
+                                <h5 class="mt-2">Chicken Eggs</h5>
+                                <p>12 pcs</p>
+                                <p class="price">$19.99</p>
+                                
+                                <p><button>Add to bag</button></p>
+                              </div>
                         </div>
-                        <div class="col">
-                          <div class="card h-100">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                          </div>
+                        <div class="col ">
+                            <div class="card">
+                                <img src="/Assets/Delete/egg.jpg" alt="Denim Jeans" style="width:100%">
+                                <h5 class="mt-2">Chicken Eggs</h5>
+                                <p>12 pcs</p>
+                                <p class="price">$19.99</p>
+                                
+                                <p><button>Add to bag</button></p>
+                              </div>
                         </div>
+                        <div class="col ">
+                            <div class="card">
+                                <img src="/Assets/Delete/egg.jpg" alt="Denim Jeans" style="width:100%">
+                                <h5 class="mt-2">Chicken Eggs</h5>
+                                <p>12 pcs</p>
+                                <p class="price">$19.99</p>
+                                
+                                <p><button>Add to bag</button></p>
+                              </div>
+                        </div>
+                     
+                       
+                       
+                       
+                        
                       </div>
                 </div>
               
