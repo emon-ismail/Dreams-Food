@@ -1,577 +1,672 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="/js/index.js"></script>
     <title>Dreams Food</title>
 
-    <link rel="stylesheet" href="/Utility/Css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Utility/Css/bootstrap.min.css" />
 
     <script src="/Utility/js/Fontawesome.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
-        
-<section> 
-    <nav class=" navbar navbar-expand  border-bottom" >
-         <div class="sidebar-logo">
-                    <a href="#">Dreams Food</a>
-                </div>
-        <button class=" btn  "   id="sidebar-toggle" type="button">
-            <!-- <span class="navbar-toggler-icon" ></span> -->
-            <img class=" navbar-toggler-icon" src="Assets/image/ham.svg" alt="">
+  <body>
+    <section>
+      <nav class="navbar navbar-expand border-bottom">
+        <div class="sidebar-logo">
+          <a href="#">Dreams Food</a>
+        </div>
+        <button class="btn" id="sidebar-toggle" type="button">
+          <img class="navbar-toggler-icon" src="Assets/image/ham.svg" alt="" />
         </button>
         <form class="ms-5">
-            <input type="text" name="search" placeholder="Search..">
-          </form>
-        <div class="navbar-collapse navbar" >
-            <ul class="navbar-nav">
-                <!-- <li class="nav-item dropdown">
-                    <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
-                        <img src="Assets/image/profile.svg" class="avatar img-fluid rounded me-5" alt="">
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                        <a href="#" class="dropdown-item">Profile</a>
-                        <a href="#" class="dropdown-item">Setting</a>
-                        <a href="#" class="dropdown-item">Logout</a>
-                    </div>
-                </li> -->
-                <li>
-                    <button class="btn btn-danger mt-2  " style="margin-right: 40px;">LogIn</button>
-                </li>
-                <li class="cart-container  container ">
-                   <div class="d-flex align-content-between  ">
-                    <!-- <button class="place-order--btn px-5">Place Order</button> -->
-                    <button style="margin-right: 150px;" class="openbtn btn position-relative" onclick="openNav()" 
-                      href="#"  >
-                      <img class=" cart" src="Assets/image/bag.png" alt="" ><span 
-                      class="position-absolute top-0 start-100 translate-middle badge
-                       rounded-2 bg-dark mt-2 h2 text-light ">99</span></button>
-                    
-                   </div>
-                </li>
-
-
-              
-            </ul>
-
-            <div id="mySidepanel" class="sidepanel " >
-                <div class="d-flex p-2 mb-3">
-                    
-                <a href="javascript:void(0)" class="closebtn  " onclick="closeNav()"><button 
-                    class=" btn btn-outline-danger ">Close</button></a>
-                </div>
-               
-               <div class="d-flex justify-content-evenly my-3">
-                <div>
-                    <button class="btn btn-outline-success mb-2">+</button>
-                    <br>
-                <button class="btn btn-outline-danger">-</button>
-                </div>
-
-                <img class="cart-added-img w-25 rounded-3" src="/Assets/Delete/egg.jpg" alt="">
-
-                <div>
-                    <p class="cart-added-name">Eggs</p>
-                    <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-                </div>
-                <div>
-                    <p class="text-danger">৳ 108</p>
-                    <p class="text-decoration-line-through">৳ 120</p>
-                </div>
-                <button class="btn">❌</button>
-               </div>
-               <div class="d-flex justify-content-evenly my-3">
-                <div>
-                    <button class="btn btn-outline-success mb-2">+</button>
-                    <br>
-                <button class="btn btn-outline-danger">-</button>
-                </div>
-
-                <img class="cart-added-img w-25 rounded-3" src="/Assets/Delete/egg.jpg" alt="">
-
-                <div>
-                    <p class="cart-added-name">Eggs</p>
-                    <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-                </div>
-                <div>
-                    <p class="text-danger">৳ 108</p>
-                    <p class="text-decoration-line-through">৳ 120</p>
-                </div>
-                <button class="btn">❌</button>
-               </div>
-               <div class="d-flex justify-content-evenly my-3">
-                <div>
-                    <button class="btn btn-outline-success mb-2">+</button>
-                    <br>
-                <button class="btn btn-outline-danger">-</button>
-                </div>
-
-                <img class="cart-added-img w-25 rounded-3" src="/Assets/Delete/egg.jpg" alt="">
-
-                <div>
-                    <p class="cart-added-name">Eggs</p>
-                    <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-                </div>
-                <div>
-                    <p class="text-danger">৳ 108</p>
-                    <p class="text-decoration-line-through">৳ 120</p>
-                </div>
-                <button class="btn">❌</button>
-               </div>
-               <div class="d-flex justify-content-evenly my-3">
-                <div>
-                    <button class="btn btn-outline-success mb-2">+</button>
-                    <br>
-                <button class="btn btn-outline-danger">-</button>
-                </div>
-
-                <img class="cart-added-img w-25 rounded-3" src="/Assets/Delete/egg.jpg" alt="">
-
-                <div>
-                    <p class="cart-added-name">Eggs</p>
-                    <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-                </div>
-                <div>
-                    <p class="text-danger">৳ 108</p>
-                    <p class="text-decoration-line-through">৳ 120</p>
-                </div>
-                <button class="btn">❌</button>
-               </div>
-               <div class="d-flex justify-content-evenly my-3">
-                <div>
-                    <button class="btn btn-outline-success mb-2">+</button>
-                    <br>
-                <button class="btn btn-outline-danger">-</button>
-                </div>
-
-                <img class="cart-added-img w-25 rounded-3" src="/Assets/Delete/egg.jpg" alt="">
-
-                <div>
-                    <p class="cart-added-name">Eggs</p>
-                    <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-                </div>
-                <div>
-                    <p class="text-danger">৳ 108</p>
-                    <p class="text-decoration-line-through">৳ 120</p>
-                </div>
-                <button class="btn">❌</button>
-               </div>
-               <div class="d-flex justify-content-evenly my-3">
-                <div>
-                    <button class="btn btn-outline-success mb-2">+</button>
-                    <br>
-                <button class="btn btn-outline-danger">-</button>
-                </div>
-
-                <img class="cart-added-img w-25 rounded-3" src="/Assets/Delete/egg.jpg" alt="">
-
-                <div>
-                    <p class="cart-added-name">Eggs</p>
-                    <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-                </div>
-                <div>
-                    <p class="text-danger">৳ 108</p>
-                    <p class="text-decoration-line-through">৳ 120</p>
-                </div>
-                <button class="btn">❌</button>
-               </div>
-               <div class="d-flex justify-content-evenly my-3">
-                <div>
-                    <button class="btn btn-outline-success mb-2">+</button>
-                    <br>
-                <button class="btn btn-outline-danger">-</button>
-                </div>
-
-                <img class="cart-added-img w-25 rounded-3" src="/Assets/Delete/egg.jpg" alt="">
-
-                <div>
-                    <p class="cart-added-name">Eggs</p>
-                    <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-                </div>
-                <div>
-                    <p class="text-danger">৳ 108</p>
-                    <p class="text-decoration-line-through">৳ 120</p>
-                </div>
-                <button class="btn">❌</button>
-               </div>
-               <div class="d-flex justify-content-evenly my-3">
-                <div>
-                    <button class="btn btn-outline-success mb-2">+</button>
-                    <br>
-                <button class="btn btn-outline-danger">-</button>
-                </div>
-
-                <img class="cart-added-img w-25 rounded-3" src="/Assets/Delete/egg.jpg" alt="">
-
-                <div>
-                    <p class="cart-added-name">Eggs</p>
-                    <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-                </div>
-                <div>
-                    <p class="text-danger">৳ 108</p>
-                    <p class="text-decoration-line-through">৳ 120</p>
-                </div>
-                <button class="btn">❌</button>
-               </div>
-               <div class="d-flex justify-content-evenly my-3">
-                <div>
-                    <button class="btn btn-outline-success mb-2">+</button>
-                    <br>
-                <button class="btn btn-outline-danger">-</button>
-                </div>
-
-                <img class="cart-added-img w-25 rounded-3" src="/Assets/Delete/egg.jpg" alt="">
-
-                <div>
-                    <p class="cart-added-name">Eggs</p>
-                    <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-                </div>
-                <div>
-                    <p class="text-danger">৳ 108</p>
-                    <p class="text-decoration-line-through">৳ 120</p>
-                </div>
-                <button class="btn">❌</button>
-               </div>
-               <div class="d-flex justify-content-evenly my-3">
-                <div>
-                    <button class="btn btn-outline-success mb-2">+</button>
-                    <br>
-                <button class="btn btn-outline-danger">-</button>
-                </div>
-
-                <img class="cart-added-img w-25 rounded-3" src="/Assets/Delete/egg.jpg" alt="">
-
-                <div>
-                    <p class="cart-added-name">Eggs</p>
-                    <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-                </div>
-                <div>
-                    <p class="text-danger">৳ 108</p>
-                    <p class="text-decoration-line-through">৳ 120</p>
-                </div>
-                <button class="btn">❌</button>
-               </div>
-               <div class="d-flex justify-content-evenly my-3">
-                <div>
-                    <button class="btn btn-outline-success mb-2">+</button>
-                    <br>
-                <button class="btn btn-outline-danger">-</button>
-                </div>
-
-                <img class="cart-added-img w-25 rounded-3" src="/Assets/Delete/egg.jpg" alt="">
-
-                <div>
-                    <p class="cart-added-name">Eggs</p>
-                    <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-                </div>
-                <div>
-                    <p class="text-danger">৳ 108</p>
-                    <p class="text-decoration-line-through">৳ 120</p>
-                </div>
-                <button class="btn">❌</button>
-               </div>
-               <div class="d-flex justify-content-evenly my-3">
-                <div>
-                    <button class="btn btn-outline-success mb-2">+</button>
-                    <br>
-                <button class="btn btn-outline-danger">-</button>
-                </div>
-
-                <img class="cart-added-img w-25 rounded-3" src="/Assets/Delete/egg.jpg" alt="">
-
-                <div>
-                    <p class="cart-added-name">Eggs</p>
-                    <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-                </div>
-                <div>
-                    <p class="text-danger">৳ 108</p>
-                    <p class="text-decoration-line-through">৳ 120</p>
-                </div>
-                <button class="btn">❌</button>
-               </div>
-
-               <div class="d-flex justify-content-between container py-5">
-                <button class=" btn btn-success">Place Order</button>
-               <p>Total: ৳200</p>
-               </div>
-
+          <input type="text" name="search" placeholder="Search.." />
+        </form>
+        <div class="navbar-collapse navbar">
+          <ul class="navbar-nav">
+            <li>
+              <button class="btn btn-danger mt-2" style="margin-right: 40px">
+                LogIn
+              </button>
+            </li>
+            <li class="cart-container container">
+              <div class="d-flex align-content-between">
+                <button
+                  style="margin-right: 150px"
+                  class="openbtn btn position-relative"
+                  onclick="openNav()"
+                  href="#"
+                >
+                  <img class="cart" src="Assets/image/bag.png" alt="" /><span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-2 bg-dark mt-2 h2 text-light"
+                    >99</span
+                  >
+                </button>
               </div>
-            
-        </div>
-    </nav>
-</section>
-    <div class="wrapper">
-        
-        <aside id="sidebar" class="js-sidebar">
-            <!-- Content For Sidebar -->
-            <div class="h-100">
-                <div class="sidebar-logo">
-                    <!-- <a href="#">Dreams Food</a> -->
-                    <div class="d-flex justify-content-evenly gap-2 ">
-                        <button class="btn btn-outline-success btn-sm " style="font-size: 12px;" >Grocery</button>
-                        <button class="btn  btn-outline-success btn-sm"style="font-size: 12px;" >Pharmacy</button>
-                        <button class=" btn btn-outline-success btn-sm"  style="font-size: 12px;">Cookups</button>
-                    
-                    </div>
-                </div>
-                <ul class="sidebar-nav">
-                   
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
-                            <i class="fa-solid fa-list pe-2"></i>
-                            Offers
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
-                            <i class="fa-solid fa-list pe-2"></i>
-                            Deal of the day
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-solid fa-file-lines pe-2"></i>
-                           Favourites
-                        </a>
-                        <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                           
-                            <li class="sidebar-item">
-                                <a   href="page1.html" class="sidebar-link">Page 1</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a    href="page2.html" class="sidebar-link">Page 2</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-solid fa-sliders pe-2"></i>
-                           Food
-                        </a>
-                        <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Post 1</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Post 2</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Post 3</a>
-                            </li>
-                        </ul>
-                    </li>
+            </li>
+          </ul>
 
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-solid fa-sliders pe-2"></i>
-                           Food
-                        </a>
-                        <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Post 1</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Post 2</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Post 3</a>
-                            </li>
-                        </ul>
-                    </li>
-
-
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-solid fa-sliders pe-2"></i>
-                           Food
-                        </a>
-                        <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Post 1</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Post 2</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Post 3</a>
-                            </li>
-                        </ul>
-                    </li>
-
-
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-solid fa-sliders pe-2"></i>
-                           Food
-                        </a>
-                        <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Post 1</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Post 2</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Post 3</a>
-                            </li>
-                        </ul>
-                    </li>
-                 
-                
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-target="#multi" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-solid fa-share-nodes pe-2"></i>
-                           Meat & Fish
-                        </a>
-                        <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-target="#level-1"
-                                    data-bs-toggle="collapse" aria-expanded="false">Frozen Fish</a>
-                                <ul id="level-1" class="sidebar-dropdown list-unstyled collapse">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Level 1.1</a>
-                                    </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Level 1.2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+          <div id="mySidepanel" class="sidepanel">
+            <div class="d-flex p-2 mb-3">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+                ><button class="btn btn-outline-danger">Close</button></a
+              >
             </div>
-        </aside>
-        <div class="main">
-         
-            <main class="content px-3 py-2" >
-                <img class="img-fluid " src="Assets/Delete/Screenshot 2024-04-19 222523.png" alt="">
-                <div>
-                    <p class="mt-4  Heading-p">
-                        Flash Sales
 
-                    </p>
-                    
-                    <div class="row row-cols-2 row-cols-md-5    card-main">
-                        <div class="col py-3">
-                            <div class="card">
-                                <img src="/Assets/Delete/egg.jpg" alt="Denim Jeans" style="width:100%">
-                                <h5 class="mt-2">Chicken Eggs</h5>
-                                <p>12 pcs</p>
-                                <p class="price">৳19.99</p>
-                                
-                                <p><button>Add to bag</button></p>
-                              </div>
-                        </div>
-                        <div class="col py-3 ">
-                            <div class="card">
-                                <img src="/Assets/Delete/egg.jpg" alt="Denim Jeans" style="width:100%">
-                                <h5 class="mt-2">Chicken Eggs</h5>
-                                <p>12 pcs</p>
-                                <p class="price">৳19.99</p>
-                                
-                                <p><button>Add to bag</button></p>
-                              </div>
-                        </div>
-                        <div class="col py-3 ">
-                            <div class="card">
-                                <img src="/Assets/Delete/egg.jpg" alt="Denim Jeans" style="width:100%">
-                                <h5 class="mt-2">Chicken Eggs</h5>
-                                <p>12 pcs</p>
-                                <p class="price">৳19.99</p>
-                                
-                                <p><button>Add to bag</button></p>
-                              </div>
-                        </div>
-                        <div class="col py-3 ">
-                            <div class="card">
-                                <img src="/Assets/Delete/egg.jpg" alt="Denim Jeans" style="width:100%">
-                                <h5 class="mt-2">Chicken Eggs</h5>
-                                <p>12 pcs</p>
-                                <p class="price">৳19.99</p>
-                                
-                                <p><button>Add to bag</button></p>
-                              </div>
-                        </div>
-                        <div class="col py-3">
-                            <div class="card">
-                                <img src="/Assets/Delete/egg.jpg" alt="Denim Jeans" style="width:100%">
-                                <h5 class="mt-2">Chicken Eggs</h5>
-                                <p>12 pcs</p>
-                                <p class="price">৳19.99</p>
-                                
-                                <p><button>Add to bag</button></p>
-                              </div>
-                        </div>
+            <div class="d-flex justify-content-evenly my-3">
+              <div>
+                <button class="btn btn-outline-success mb-2">+</button>
+                <br />
+                <button class="btn btn-outline-danger">-</button>
+              </div>
 
-                      </div>
-                </div>
+              <img
+                class="cart-added-img w-25 rounded-3"
+                src="/Assets/Delete/egg.jpg"
+                alt=""
+              />
 
-                <h1 class="Heading-p">Food</h1>
+              <div>
+                <p class="cart-added-name">Eggs</p>
+                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
+              </div>
+              <div>
+                <p class="text-danger">৳ 108</p>
+                <p class="text-decoration-line-through">৳ 120</p>
+              </div>
+              <button class="btn">❌</button>
+            </div>
+            <div class="d-flex justify-content-evenly my-3">
+              <div>
+                <button class="btn btn-outline-success mb-2">+</button>
+                <br />
+                <button class="btn btn-outline-danger">-</button>
+              </div>
 
-                <div class="row row-cols-2 row-cols-md-5  always-same--gap">
-                    <div class="cols">
-                        <a href="#">
-                            <img class="img-fluid" src="/Assets/Delete/fruitsa.png" alt="">
-                        <a class="text-dark text-center obj-a" href="#">Fruits and Vegatables</a>
-                        </a>
-                        </div>
-                    <div class="cols">
-                        <a href="#">
-                            <img class="img-fluid" src="/Assets/Delete/fruitsa.png" alt="">
-                        <a class="text-dark text-center obj-a" href="#">Fruits and Vegatables</a>
-                        </a>
-                        </div>
-                    <div class="cols">
-                        <a href="#">
-                            <img class="img-fluid" src="/Assets/Delete/fruitsa.png" alt="">
-                        <a class="text-dark text-center obj-a" href="#">Fruits and Vegatables</a>
-                        </a>
-                        </div>
-                    <div class="cols">
-                        <a href="#">
-                            <img class="img-fluid" src="/Assets/Delete/fruitsa.png" alt="">
-                        <a class="text-dark text-center obj-a" href="#">Fruits and Vegatables</a>
-                        </a>
-                        </div>
-                    <div class="cols">
-                        <a href="#">
-                            <img class="img-fluid" src="/Assets/Delete/fruitsa.png" alt="">
-                        <a class="text-dark text-center obj-a" href="#">Fruits and Vegatables</a>
-                        </a>
-                        </div>
-                    <div class="cols">
-                        <a href="#">
-                            <img class="img-fluid" src="/Assets/Delete/fruitsa.png" alt="">
-                        <a class="text-dark text-center obj-a" href="#">Fruits and Vegatables</a>
-                        </a>
-                        </div>
-                    <div class="cols">
-                        <a href="#">
-                            <img class="img-fluid" src="/Assets/Delete/fruitsa.png" alt="">
-                        <a class="text-dark text-center obj-a" href="#">Fruits and Vegatables</a>
-                        </a>
-                        </div>
+              <img
+                class="cart-added-img w-25 rounded-3"
+                src="/Assets/Delete/egg.jpg"
+                alt=""
+              />
 
-                   
-                  
-                
+              <div>
+                <p class="cart-added-name">Eggs</p>
+                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
+              </div>
+              <div>
+                <p class="text-danger">৳ 108</p>
+                <p class="text-decoration-line-through">৳ 120</p>
+              </div>
+              <button class="btn">❌</button>
+            </div>
+            <div class="d-flex justify-content-evenly my-3">
+              <div>
+                <button class="btn btn-outline-success mb-2">+</button>
+                <br />
+                <button class="btn btn-outline-danger">-</button>
+              </div>
 
-                </div>
+              <img
+                class="cart-added-img w-25 rounded-3"
+                src="/Assets/Delete/egg.jpg"
+                alt=""
+              />
 
+              <div>
+                <p class="cart-added-name">Eggs</p>
+                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
+              </div>
+              <div>
+                <p class="text-danger">৳ 108</p>
+                <p class="text-decoration-line-through">৳ 120</p>
+              </div>
+              <button class="btn">❌</button>
+            </div>
+            <div class="d-flex justify-content-evenly my-3">
+              <div>
+                <button class="btn btn-outline-success mb-2">+</button>
+                <br />
+                <button class="btn btn-outline-danger">-</button>
+              </div>
 
-              
-            </main>
-           
-            
+              <img
+                class="cart-added-img w-25 rounded-3"
+                src="/Assets/Delete/egg.jpg"
+                alt=""
+              />
+
+              <div>
+                <p class="cart-added-name">Eggs</p>
+                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
+              </div>
+              <div>
+                <p class="text-danger">৳ 108</p>
+                <p class="text-decoration-line-through">৳ 120</p>
+              </div>
+              <button class="btn">❌</button>
+            </div>
+            <div class="d-flex justify-content-evenly my-3">
+              <div>
+                <button class="btn btn-outline-success mb-2">+</button>
+                <br />
+                <button class="btn btn-outline-danger">-</button>
+              </div>
+
+              <img
+                class="cart-added-img w-25 rounded-3"
+                src="/Assets/Delete/egg.jpg"
+                alt=""
+              />
+
+              <div>
+                <p class="cart-added-name">Eggs</p>
+                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
+              </div>
+              <div>
+                <p class="text-danger">৳ 108</p>
+                <p class="text-decoration-line-through">৳ 120</p>
+              </div>
+              <button class="btn">❌</button>
+            </div>
+            <div class="d-flex justify-content-evenly my-3">
+              <div>
+                <button class="btn btn-outline-success mb-2">+</button>
+                <br />
+                <button class="btn btn-outline-danger">-</button>
+              </div>
+
+              <img
+                class="cart-added-img w-25 rounded-3"
+                src="/Assets/Delete/egg.jpg"
+                alt=""
+              />
+
+              <div>
+                <p class="cart-added-name">Eggs</p>
+                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
+              </div>
+              <div>
+                <p class="text-danger">৳ 108</p>
+                <p class="text-decoration-line-through">৳ 120</p>
+              </div>
+              <button class="btn">❌</button>
+            </div>
+            <div class="d-flex justify-content-evenly my-3">
+              <div>
+                <button class="btn btn-outline-success mb-2">+</button>
+                <br />
+                <button class="btn btn-outline-danger">-</button>
+              </div>
+
+              <img
+                class="cart-added-img w-25 rounded-3"
+                src="/Assets/Delete/egg.jpg"
+                alt=""
+              />
+
+              <div>
+                <p class="cart-added-name">Eggs</p>
+                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
+              </div>
+              <div>
+                <p class="text-danger">৳ 108</p>
+                <p class="text-decoration-line-through">৳ 120</p>
+              </div>
+              <button class="btn">❌</button>
+            </div>
+            <div class="d-flex justify-content-evenly my-3">
+              <div>
+                <button class="btn btn-outline-success mb-2">+</button>
+                <br />
+                <button class="btn btn-outline-danger">-</button>
+              </div>
+
+              <img
+                class="cart-added-img w-25 rounded-3"
+                src="/Assets/Delete/egg.jpg"
+                alt=""
+              />
+
+              <div>
+                <p class="cart-added-name">Eggs</p>
+                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
+              </div>
+              <div>
+                <p class="text-danger">৳ 108</p>
+                <p class="text-decoration-line-through">৳ 120</p>
+              </div>
+              <button class="btn">❌</button>
+            </div>
+            <div class="d-flex justify-content-evenly my-3">
+              <div>
+                <button class="btn btn-outline-success mb-2">+</button>
+                <br />
+                <button class="btn btn-outline-danger">-</button>
+              </div>
+
+              <img
+                class="cart-added-img w-25 rounded-3"
+                src="/Assets/Delete/egg.jpg"
+                alt=""
+              />
+
+              <div>
+                <p class="cart-added-name">Eggs</p>
+                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
+              </div>
+              <div>
+                <p class="text-danger">৳ 108</p>
+                <p class="text-decoration-line-through">৳ 120</p>
+              </div>
+              <button class="btn">❌</button>
+            </div>
+            <div class="d-flex justify-content-evenly my-3">
+              <div>
+                <button class="btn btn-outline-success mb-2">+</button>
+                <br />
+                <button class="btn btn-outline-danger">-</button>
+              </div>
+
+              <img
+                class="cart-added-img w-25 rounded-3"
+                src="/Assets/Delete/egg.jpg"
+                alt=""
+              />
+
+              <div>
+                <p class="cart-added-name">Eggs</p>
+                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
+              </div>
+              <div>
+                <p class="text-danger">৳ 108</p>
+                <p class="text-decoration-line-through">৳ 120</p>
+              </div>
+              <button class="btn">❌</button>
+            </div>
+            <div class="d-flex justify-content-evenly my-3">
+              <div>
+                <button class="btn btn-outline-success mb-2">+</button>
+                <br />
+                <button class="btn btn-outline-danger">-</button>
+              </div>
+
+              <img
+                class="cart-added-img w-25 rounded-3"
+                src="/Assets/Delete/egg.jpg"
+                alt=""
+              />
+
+              <div>
+                <p class="cart-added-name">Eggs</p>
+                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
+              </div>
+              <div>
+                <p class="text-danger">৳ 108</p>
+                <p class="text-decoration-line-through">৳ 120</p>
+              </div>
+              <button class="btn">❌</button>
+            </div>
+            <div class="d-flex justify-content-evenly my-3">
+              <div>
+                <button class="btn btn-outline-success mb-2">+</button>
+                <br />
+                <button class="btn btn-outline-danger">-</button>
+              </div>
+
+              <img
+                class="cart-added-img w-25 rounded-3"
+                src="/Assets/Delete/egg.jpg"
+                alt=""
+              />
+
+              <div>
+                <p class="cart-added-name">Eggs</p>
+                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
+              </div>
+              <div>
+                <p class="text-danger">৳ 108</p>
+                <p class="text-decoration-line-through">৳ 120</p>
+              </div>
+              <button class="btn">❌</button>
+            </div>
+
+            <div class="d-flex justify-content-between container py-5">
+              <button class="btn btn-success">Place Order</button>
+              <p>Total: ৳200</p>
+            </div>
+          </div>
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
-</body>
+      </nav>
+    </section>
+    <div class="wrapper">
+      <aside id="sidebar" class="js-sidebar">
+        <!-- Content For Sidebar -->
+        <div class="h-100">
+          <div class="sidebar-logo">
+            
+            <div class="d-flex justify-content-evenly gap-2">
+              <button
+                class="btn btn-outline-success btn-sm"
+                style="font-size: 12px"
+              >
+                Grocery
+              </button>
+              <button
+                class="btn btn-outline-success btn-sm"
+                style="font-size: 12px"
+              >
+                Pharmacy
+              </button>
+              <button
+                class="btn btn-outline-success btn-sm"
+                style="font-size: 12px"
+              >
+                Cookups
+              </button>
+            </div>
+          </div>
+          <ul class="sidebar-nav">
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-list pe-2"></i>
+                Offers
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-bolt pe-2 sidebar-icon"></i>
+              Flash Sales
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-fire pe-2 sidebar-icon"></i>
+       Popular
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-heart pe-2 sidebar-icon"></i>
+                Favourites
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a
+                href="#"
+                class="sidebar-link collapsed"
+                data-bs-target="#pages"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+                ><i class="fa-solid fa-baby pe-2 sidebar-icon"></i>
+            Baby Care
+              </a>
+              <ul
+                id="pages"
+                class="sidebar-dropdown list-unstyled collapse"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a href="page1.html" class="sidebar-link">Page 1</a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="page2.html" class="sidebar-link">Page 2</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a
+                href="#"
+                class="sidebar-link collapsed"
+                data-bs-target="#posts"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+                ><i class="fa-solid fa-utensils pe-2 sidebar-icon " ></i>
+                <!-- <i class="fa-regular fa-burger pe-2" style="color: #cf0707;"></i> -->
+                Food
+              </a>
+              <ul
+                id="posts"
+                class="sidebar-dropdown list-unstyled collapse"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">Post 1</a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">Post 2</a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">Post 3</a>
+                </li>
+              </ul>
+            </li>
 
+          
+
+        
+
+           
+
+            <li class="sidebar-item">
+              <a
+                href="#"
+                class="sidebar-link collapsed"
+                data-bs-target="#multi"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+                ><i class="fa-solid fa-fish pe-2 sidebar-icon "></i>
+                Meat & Fish
+              </a>
+              <ul
+                id="multi"
+                class="sidebar-dropdown list-unstyled collapse"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a
+                    href="#"
+                    class="sidebar-link collapsed"
+                    data-bs-target="#level-1"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                    >Frozen Fish</a
+                  >
+                  <ul
+                    id="level-1"
+                    class="sidebar-dropdown list-unstyled collapse"
+                  >
+                    <li class="sidebar-item">
+                      <a href="#" class="sidebar-link">Level 1.1</a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a href="#" class="sidebar-link">Level 1.2</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <div class="main">
+        <main class="content px-3 py-2">
+          <img
+            class="img-fluid"
+            src="Assets/Delete/Screenshot 2024-04-19 222523.png"
+            alt=""
+          />
+          <div>
+            <p class="mt-4 Heading-p">Flash Sales</p>
+
+            <div class="row row-cols-2 row-cols-md-5 card-main">
+              <div class="col py-3">
+                <div class="card">
+                  <img
+                    src="/Assets/Delete/egg.jpg"
+                    alt="Denim Jeans"
+                    style="width: 100%"
+                  />
+                  <h5 class="mt-2">Chicken Eggs</h5>
+                  <p>12 pcs</p>
+                  <p class="price">৳19.99</p>
+
+                  <p><button>Add to bag</button></p>
+                </div>
+              </div>
+              <div class="col py-3">
+                <div class="card">
+                  <img
+                    src="/Assets/Delete/egg.jpg"
+                    alt="Denim Jeans"
+                    style="width: 100%"
+                  />
+                  <h5 class="mt-2">Chicken Eggs</h5>
+                  <p>12 pcs</p>
+                  <p class="price">৳19.99</p>
+
+                  <p><button>Add to bag</button></p>
+                </div>
+              </div>
+              <div class="col py-3">
+                <div class="card">
+                  <img
+                    src="/Assets/Delete/egg.jpg"
+                    alt="Denim Jeans"
+                    style="width: 100%"
+                  />
+                  <h5 class="mt-2">Chicken Eggs</h5>
+                  <p>12 pcs</p>
+                  <p class="price">৳19.99</p>
+
+                  <p><button>Add to bag</button></p>
+                </div>
+              </div>
+              <div class="col py-3">
+                <div class="card">
+                  <img
+                    src="/Assets/Delete/egg.jpg"
+                    alt="Denim Jeans"
+                    style="width: 100%"
+                  />
+                  <h5 class="mt-2">Chicken Eggs</h5>
+                  <p>12 pcs</p>
+                  <p class="price">৳19.99</p>
+
+                  <p><button>Add to bag</button></p>
+                </div>
+              </div>
+              <div class="col py-3">
+                <div class="card">
+                  <img
+                    src="/Assets/Delete/egg.jpg"
+                    alt="Denim Jeans"
+                    style="width: 100%"
+                  />
+                  <h5 class="mt-2">Chicken Eggs</h5>
+                  <p>12 pcs</p>
+                  <p class="price">৳19.99</p>
+
+                  <p><button>Add to bag</button></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h1 class="Heading-p">Food</h1>
+
+          <div class="row row-cols-2 row-cols-md-5 always-same--gap">
+            <div class="cols">
+              <a href="#">
+                <img
+                  class="img-fluid"
+                  src="/Assets/Delete/fruitsa.png"
+                  alt=""
+                />
+                <a class="text-dark text-center obj-a" href="#"
+                  >Fruits and Vegatables</a
+                >
+              </a>
+            </div>
+            <div class="cols">
+              <a href="#">
+                <img
+                  class="img-fluid"
+                  src="/Assets/Delete/fruitsa.png"
+                  alt=""
+                />
+                <a class="text-dark text-center obj-a" href="#"
+                  >Fruits and Vegatables</a
+                >
+              </a>
+            </div>
+            <div class="cols">
+              <a href="#">
+                <img
+                  class="img-fluid"
+                  src="/Assets/Delete/fruitsa.png"
+                  alt=""
+                />
+                <a class="text-dark text-center obj-a" href="#"
+                  >Fruits and Vegatables</a
+                >
+              </a>
+            </div>
+            <div class="cols">
+              <a href="#">
+                <img
+                  class="img-fluid"
+                  src="/Assets/Delete/fruitsa.png"
+                  alt=""
+                />
+                <a class="text-dark text-center obj-a" href="#"
+                  >Fruits and Vegatables</a
+                >
+              </a>
+            </div>
+            <div class="cols">
+              <a href="#">
+                <img
+                  class="img-fluid"
+                  src="/Assets/Delete/fruitsa.png"
+                  alt=""
+                />
+                <a class="text-dark text-center obj-a" href="#"
+                  >Fruits and Vegatables</a
+                >
+              </a>
+            </div>
+            <div class="cols">
+              <a href="#">
+                <img
+                  class="img-fluid"
+                  src="/Assets/Delete/fruitsa.png"
+                  alt=""
+                />
+                <a class="text-dark text-center obj-a" href="#"
+                  >Fruits and Vegatables</a
+                >
+              </a>
+            </div>
+            <div class="cols">
+              <a href="#">
+                <img
+                  class="img-fluid"
+                  src="/Assets/Delete/fruitsa.png"
+                  alt=""
+                />
+                <a class="text-dark text-center obj-a" href="#"
+                  >Fruits and Vegatables</a
+                >
+              </a>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="/Utility/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
