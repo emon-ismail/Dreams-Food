@@ -91,6 +91,13 @@ font-size: 20px;
     padding-top: 60px;
     transition: 0.5s;
 }
+.total{
+    font-size: 18px;
+    font-weight: bold;
+}
+.total span{
+    color: #cf0707;
+}
 
 @media only screen and (min-width: 768px) {
     .sidepanel {
