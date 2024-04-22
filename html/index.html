@@ -7,10 +7,10 @@
     <script src="/js/index.js"></script>
     <title>Dreams Food</title>
 
-    <link rel="stylesheet" href="/Utility/Css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/plugins/bootrsap/css/bootstrap.min.css" />
 
-    <script src="/Utility/js/Fontawesome.js"></script>
-    <link rel="stylesheet" href="css/style.css" />
+    <script src="/plugins/fontawosome/js/Fontawesome.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
 
   <body>
@@ -20,7 +20,7 @@
           <a href="#">Dreams Food</a>
         </div>
         <button class="btn" id="sidebar-toggle" type="button">
-          <img class="navbar-toggler-icon" src="Assets/image/ham.svg" alt="" />
+          <img class="navbar-toggler-icon" src="/assets/image/ham.svg" alt="" />
         </button>
         <form class="ms-5">
           <input type="text" name="search" placeholder="Search.." />
@@ -28,9 +28,49 @@
         <div class="navbar-collapse navbar">
           <ul class="navbar-nav">
             <li>
-              <button class="btn btn-danger mt-2" style="margin-right: 40px">
+              
+<!-- Button trigger modal -->
+              <button type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-danger mt-2" style="margin-right: 40px">
                 LogIn
               </button>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-light text-dark">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="d-grid gap-4">
+          <button class="btn btn-primary p-3" type="button">Sign up or Login with Facebook</button>
+          <button class="btn btn-warning p-3" type="button">Login with Email</button>
+        </div>
+        <div class="form-group">
+         
+          <label for="exampleFormControlInput3 " class="py-3">PLEASE ENTER YOUR MOBILE PHONE NUMBER
+          </label>
+              <div class="input-group">
+                 <span class="input-group-text" id="basic-addon1">+88</span>
+                     <input type="tel" class="form-control  text-light" id="exampleFormControlInput3" maxlength="10" placeholder="e.g. +8801672955886" pattern="\+8801[0-9]{9}">
+              </div> 
+       </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Sign up/ Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
             </li>
             <li class="cart-container container">
               <div class="d-flex align-content-between">
@@ -40,7 +80,7 @@
                   onclick="openNav()"
                   href="#"
                 >
-                  <img class="cart" src="Assets/image/bag.png" alt="" /><span
+                  <img class="cart" src="/assets/image/bag.png" alt="" /><span
                     class="position-absolute top-0 start-100 translate-middle badge rounded-2 bg-dark mt-2 h2 text-light"
                     >99</span
                   >
@@ -65,7 +105,7 @@
 
               <img
                 class="cart-added-img w-25 rounded-3"
-                src="/Assets/Delete/egg.jpg"
+                src="/assets/Delete/egg.jpg"
                 alt=""
               />
 
@@ -88,7 +128,7 @@
 
               <img
                 class="cart-added-img w-25 rounded-3"
-                src="/Assets/Delete/egg.jpg"
+                src="/assets/Delete/egg.jpg"
                 alt=""
               />
 
@@ -111,7 +151,7 @@
 
               <img
                 class="cart-added-img w-25 rounded-3"
-                src="/Assets/Delete/egg.jpg"
+                src="/assets/Delete/egg.jpg"
                 alt=""
               />
 
@@ -134,7 +174,7 @@
 
               <img
                 class="cart-added-img w-25 rounded-3"
-                src="/Assets/Delete/egg.jpg"
+                src="/assets/Delete/egg.jpg"
                 alt=""
               />
 
@@ -157,7 +197,7 @@
 
               <img
                 class="cart-added-img w-25 rounded-3"
-                src="/Assets/Delete/egg.jpg"
+                src="/assets/Delete/egg.jpg"
                 alt=""
               />
 
@@ -180,7 +220,7 @@
 
               <img
                 class="cart-added-img w-25 rounded-3"
-                src="/Assets/Delete/egg.jpg"
+                src="/assets/Delete/egg.jpg"
                 alt=""
               />
 
@@ -203,7 +243,7 @@
 
               <img
                 class="cart-added-img w-25 rounded-3"
-                src="/Assets/Delete/egg.jpg"
+                src="/assets/Delete/egg.jpg"
                 alt=""
               />
 
@@ -226,7 +266,7 @@
 
               <img
                 class="cart-added-img w-25 rounded-3"
-                src="/Assets/Delete/egg.jpg"
+                src="/assets/Delete/egg.jpg"
                 alt=""
               />
 
@@ -249,7 +289,7 @@
 
               <img
                 class="cart-added-img w-25 rounded-3"
-                src="/Assets/Delete/egg.jpg"
+                src="/assets/Delete/egg.jpg"
                 alt=""
               />
 
@@ -272,7 +312,7 @@
 
               <img
                 class="cart-added-img w-25 rounded-3"
-                src="/Assets/Delete/egg.jpg"
+                src="/assets/Delete/egg.jpg"
                 alt=""
               />
 
@@ -295,7 +335,7 @@
 
               <img
                 class="cart-added-img w-25 rounded-3"
-                src="/Assets/Delete/egg.jpg"
+                src="/assets/Delete/egg.jpg"
                 alt=""
               />
 
@@ -318,7 +358,7 @@
 
               <img
                 class="cart-added-img w-25 rounded-3"
-                src="/Assets/Delete/egg.jpg"
+                src="/assets/Delete/egg.jpg"
                 alt=""
               />
 
@@ -508,7 +548,7 @@
         <main class="content px-3 py-2">
           <img
             class="img-fluid"
-            src="Assets/Delete/Screenshot 2024-04-19 222523.png"
+            src="/assets/Delete/Screenshot 2024-04-19 222523.png"
             alt=""
           />
           <div>
@@ -518,7 +558,7 @@
               <div class="col py-3">
                 <div class="card">
                   <img
-                    src="/Assets/Delete/egg.jpg"
+                    src="/assets/Delete/egg.jpg"
                     alt="Denim Jeans"
                     style="width: 100%"
                   />
@@ -532,7 +572,7 @@
               <div class="col py-3">
                 <div class="card">
                   <img
-                    src="/Assets/Delete/egg.jpg"
+                    src="/assets/Delete/egg.jpg"
                     alt="Denim Jeans"
                     style="width: 100%"
                   />
@@ -546,7 +586,7 @@
               <div class="col py-3">
                 <div class="card">
                   <img
-                    src="/Assets/Delete/egg.jpg"
+                    src="/assets/Delete/egg.jpg"
                     alt="Denim Jeans"
                     style="width: 100%"
                   />
@@ -560,7 +600,7 @@
               <div class="col py-3">
                 <div class="card">
                   <img
-                    src="/Assets/Delete/egg.jpg"
+                    src="/assets/Delete/egg.jpg"
                     alt="Denim Jeans"
                     style="width: 100%"
                   />
@@ -574,7 +614,7 @@
               <div class="col py-3">
                 <div class="card">
                   <img
-                    src="/Assets/Delete/egg.jpg"
+                    src="/assets/Delete/egg.jpg"
                     alt="Denim Jeans"
                     style="width: 100%"
                   />
@@ -595,7 +635,7 @@
               <a href="#">
                 <img
                   class="img-fluid"
-                  src="/Assets/Delete/fruitsa.png"
+                  src="/assets/Delete/fruitsa.png"
                   alt=""
                 />
                 <a class="text-dark text-center obj-a" href="#"
@@ -607,7 +647,7 @@
               <a href="#">
                 <img
                   class="img-fluid"
-                  src="/Assets/Delete/fruitsa.png"
+                  src="/assets/Delete/fruitsa.png"
                   alt=""
                 />
                 <a class="text-dark text-center obj-a" href="#"
@@ -619,7 +659,7 @@
               <a href="#">
                 <img
                   class="img-fluid"
-                  src="/Assets/Delete/fruitsa.png"
+                  src="/assets/Delete/fruitsa.png"
                   alt=""
                 />
                 <a class="text-dark text-center obj-a" href="#"
@@ -631,7 +671,7 @@
               <a href="#">
                 <img
                   class="img-fluid"
-                  src="/Assets/Delete/fruitsa.png"
+                  src="/assets/Delete/fruitsa.png"
                   alt=""
                 />
                 <a class="text-dark text-center obj-a" href="#"
@@ -643,7 +683,7 @@
               <a href="#">
                 <img
                   class="img-fluid"
-                  src="/Assets/Delete/fruitsa.png"
+                  src="/assets/Delete/fruitsa.png"
                   alt=""
                 />
                 <a class="text-dark text-center obj-a" href="#"
@@ -655,7 +695,7 @@
               <a href="#">
                 <img
                   class="img-fluid"
-                  src="/Assets/Delete/fruitsa.png"
+                  src="/assets/Delete/fruitsa.png"
                   alt=""
                 />
                 <a class="text-dark text-center obj-a" href="#"
@@ -667,7 +707,7 @@
               <a href="#">
                 <img
                   class="img-fluid"
-                  src="/Assets/Delete/fruitsa.png"
+                  src="/assets/Delete/fruitsa.png"
                   alt=""
                 />
                 <a class="text-dark text-center obj-a" href="#"
@@ -679,7 +719,7 @@
         </main>
       </div>
     </div>
-    <script src="/Utility/js/bootstrap.bundle.min.js"></script>
+    <script src="/plugins/bootrsap/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
