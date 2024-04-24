@@ -11,6 +11,7 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     overflow: hidden;
     font-size: 0.875rem;
+    margin: 0;
 }
 
 
@@ -22,14 +23,7 @@ body {
 }
 
 
-/* body {
-    font-family: 'Poppins', sans-serif;
-    
-    opacity: 1;
-    overflow-y: scroll;
-    margin: 0;
-    overflow: hidden;
-} */
+
 
 a {
     cursor: pointer;
