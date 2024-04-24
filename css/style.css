@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 @font-face {
     font-family: 'Segoe UI';
     src: local('Segoe UI'), local('SegoeUI'),
@@ -10,6 +10,7 @@
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     overflow: hidden;
+    font-size: 0.875rem;
 }
 
 
@@ -23,7 +24,7 @@ body {
 
 /* body {
     font-family: 'Poppins', sans-serif;
-    font-size: 0.875rem;
+    
     opacity: 1;
     overflow-y: scroll;
     margin: 0;
@@ -33,7 +34,7 @@ body {
 a {
     cursor: pointer;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     font-weight:lighter;
 
 }
@@ -43,7 +44,7 @@ li {
 }
 
 h4 {
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     font-size: 1.275rem;
     color: var(--bs-emphasis-color);
 }
@@ -386,7 +387,7 @@ input[type=text] {
     max-width: 300px;
     margin: auto;
     text-align: center;
-    font-family: arial;
+    /* font-family: arial; */
     display: flex;
     flex-direction: column;
     align-items: center; /* Center content horizontally */
