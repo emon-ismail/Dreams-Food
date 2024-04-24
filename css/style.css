@@ -9,6 +9,7 @@
 /* Apply Segoe UI font family to the entire document */
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
 }
 
 
