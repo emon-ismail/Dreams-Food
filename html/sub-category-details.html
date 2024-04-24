@@ -8,20 +8,17 @@
     <title>Dreams Food</title>
 
     <link rel="stylesheet" href="/plugins/bootrsap/css/bootstrap.min.css" />
+    <script src="/plugins/sweet alert/js/sweetAlert.js"></script>
 
     <script src="/plugins/fontawosome/js/Fontawesome.js"></script>
-  
-  </head>
-    <script src="/plugins/sweet alert/js/sweetAlert.js"></script>
     <link rel="stylesheet" href="/css/style.css" />
-    
   </head>
 
   <body>
     <section>
       <nav class="navbar navbar-expand border-bottom">
         <div class="sidebar-logo">
-          <a href="#">Dreams Food</a>
+          <a href="/html/index.html">Dreams Food</a>
         </div>
         <button class="btn" id="sidebar-toggle" type="button">
           <img class="navbar-toggler-icon" src="/assets/image/ham.svg" alt="" />
@@ -384,16 +381,13 @@
             </div>
 
             <div class="d-flex justify-content-between container py-5 mx-auto">
-              <button id="placeOrderBtn" class="btn btn-success">Place Order</button>
+                <button id="placeOrderBtn" class="btn btn-success">Place Order</button>
               <p class="total ">Total:   <span> ৳200</span></p>
             </div>
           </div>
         </div>
       </nav>
     </section>
-
-
-    
     <div class="wrapper">
       <aside id="sidebar" class="js-sidebar">
         <!-- Content For Sidebar -->
@@ -486,13 +480,13 @@
                 data-bs-parent="#sidebar"
               >
                 <li class="sidebar-item">
-                  <a href="/html/sub-category-details.html" class="sidebar-link">Fresh Vegatables</a>
+                  <a href="#" class="sidebar-link">Fresh Vegatables</a>
                 </li>
                 <li class="sidebar-item">
-                  <a href="/html/sub-category-details.html" class="sidebar-link">Dates(Khejur)</a>
+                  <a href="#" class="sidebar-link">Post 2</a>
                 </li>
                 <li class="sidebar-item">
-                  <a href="/html/sub-category-details.html" class="sidebar-link">Fruits and Vegatables</a>
+                  <a href="#" class="sidebar-link">Post 3</a>
                 </li>
               </ul>
             </li>
@@ -557,267 +551,165 @@
           </ul>
         </div>
       </aside>
-      <div class="main">
-        <main class="content px-3 py-2">
-          <img
-            class="img-fluid"
-            src="/assets/Delete/Screenshot 2024-04-19 222523.png"
-            alt=""
-          />
-          <div>
-            <p class="mt-4 Heading-p">Flash Sales</p>
-
-            <div class="row row-cols-2 row-cols-md-5 card-main">
-              <div class="col always-same--gap-card ">
-                <div class="card">
-                  <img
-                    src="/assets/Delete/eggg.png"
-                    alt=""
-                   
-                  />
-                  <h5 class="mt-2">Chicken Eggs</h5>
-                  <p>12 pcs</p>
-                  <p class="price">৳19.99</p>
-                  <button type="button"  data-bs-toggle="modal" data-bs-target="#details-modal"    class="btn btn-sm w-100 btn-details">Details</button>
+      <div class="main ">
+        <div class="row row-cols-2 row-cols-md-5 card-main mt-5">
+            <div class="col always-same--gap-card  ">
+              <div class="card">
+                <img
+                  src="/assets/Delete/eggg.png"
+                  alt=""
+                 
+                />
+                <h5 class="mt-2">Chicken Eggs</h5>
+                <p>12 pcs</p>
+                <p class="price">৳19.99</p>
+                <button type="button"  data-bs-toggle="modal" data-bs-target="#details-modal"    class="btn btn-sm w-100 btn-details">Details</button>
 <div class=" d-flex gap-2   pb-3 ">
-  <button class=" btn w-25">+</button>
-        <button class=" btn bag-btn ">Add to bag</button>
-        <button class=" btn w-25">-</button>
+<button class=" btn w-25">+</button>
+      <button class=" btn bag-btn ">Add to bag</button>
+      <button class=" btn w-25">-</button>
 </div>
-                </div>
-
               </div>
+
+            </div>
 
 <!-- Modal -->
 <div class="modal fade "  id="details-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content bg-light text-dark">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Chicken Eggs (Layer)</h5>
-        <button type="button" class="custom-close-button btn" data-bs-dismiss="modal" aria-label="Close">❌</button>
+<div class="modal-dialog modal-lg">
+  <div class="modal-content bg-light text-dark">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Chicken Eggs (Layer)</h5>
+      <button type="button" class="custom-close-button btn" data-bs-dismiss="modal" aria-label="Close">❌</button>
 
 
 
+    </div>
+    <div class="modal-body container ">
+    <div class=" row d-flex justify-content-evenly">
+      <div class="col-5">
+        <img class="img-fluid" src="/assets/Delete/eggg.png" alt="">
       </div>
-      <div class="modal-body container ">
-      <div class=" row d-flex justify-content-evenly">
-        <div class="col-5">
-          <img class="img-fluid" src="/assets/Delete/eggg.png" alt="">
-        </div>
-        <div class="col-7">
-          <p>Chicken Eggs (Layer)</p>
-          <p>12 pcs</p>
-          <p>৳
-            129</p>
-            <div class=" d-flex gap-2   pb-3 ">
-              <button class=" btn w-25 btn-success  ">+</button>
-                    <input class=" btn bag-btn " placeholder="0"></input>
-                    <button class=" btn w-25 btn-danger">-</button>
+      <div class="col-7">
+        <p>Chicken Eggs (Layer)</p>
+        <p>12 pcs</p>
+        <p>৳
+          129</p>
+          <div class=" d-flex gap-2   pb-3 ">
+            <button class=" btn w-25 btn-success  ">+</button>
+                  <input class=" btn bag-btn " placeholder="0"></input>
+                  <button class=" btn w-25 btn-danger">-</button>
 
-                    
-                    
-            </div>
-            <button class="btn btn-outline-success w-75">Buy Now</button>
-            <hr class="hr" />
+                  
+                  
+          </div>
+          <button class="btn btn-outline-success w-75">Buy Now</button>
+          <hr class="hr" />
 
-            <p>
-              Weight without Box: 750 gm ±50 gm
+          <p>
+            Weight without Box: 750 gm ±50 gm
 
 Weight with Box: 830 gm ±50 gm
 
 Eggs are an all-natural source of high-quality protein and a number of other nutrients, all for 70 calories an egg. 100% fresh and healthy.
-            </p>
-           
-            
-        </div>
+          </p>
+         
+          
       </div>
-       
-      </div>
-      
     </div>
+     
+    </div>
+    
   </div>
+</div>
 </div>
 
 <!-- modal end for details -->
 
 
 <div class="col always-same--gap-card ">
-  <div class="card">
-    <img
-      src="/assets/Delete/eggg.png"
-      alt=""
-     
-    />
-    <h5 class="mt-2">Chicken Eggs</h5>
-    <p>12 pcs</p>
-    <p class="price">৳19.99</p>
-    <button type="button"  data-bs-toggle="modal" data-bs-target="#details-modal"    class="btn btn-sm w-100 btn-details">Details</button>
+<div class="card">
+  <img
+    src="/assets/Delete/eggg.png"
+    alt=""
+   
+  />
+  <h5 class="mt-2">Chicken Eggs</h5>
+  <p>12 pcs</p>
+  <p class="price">৳19.99</p>
+  <button type="button"  data-bs-toggle="modal" data-bs-target="#details-modal"    class="btn btn-sm w-100 btn-details">Details</button>
 <div class=" d-flex gap-2   pb-3 ">
 <button class=" btn w-25">+</button>
 <button class=" btn bag-btn ">Add to bag</button>
 <button class=" btn w-25">-</button>
 </div>
-  </div>
+</div>
 
 </div>
-<div class="col always-same--gap-card ">
-  <div class="card">
-    <img
-      src="/assets/Delete/eggg.png"
-      alt=""
-     
-    />
-    <h5 class="mt-2">Chicken Eggs</h5>
-    <p>12 pcs</p>
-    <p class="price">৳19.99</p>
-    <button type="button"  data-bs-toggle="modal" data-bs-target="#details-modal"    class="btn btn-sm w-100 btn-details">Details</button>
+<div class="col always-same--gap-card  ">
+<div class="card">
+  <img
+    src="/assets/Delete/eggg.png"
+    alt=""
+   
+  />
+  <h5 class="mt-2">Chicken Eggs</h5>
+  <p>12 pcs</p>
+  <p class="price">৳19.99</p>
+  <button type="button"  data-bs-toggle="modal" data-bs-target="#details-modal"    class="btn btn-sm w-100 btn-details">Details</button>
 <div class=" d-flex gap-2   pb-3 ">
 <button class=" btn w-25">+</button>
 <button class=" btn bag-btn ">Add to bag</button>
 <button class=" btn w-25">-</button>
 </div>
-  </div>
-
 </div>
 
-<div class="col always-same--gap-card ">
-  <div class="card">
-    <img
-      src="/assets/Delete/eggg.png"
-      alt=""
-     
-    />
-    <h5 class="mt-2">Chicken Eggs</h5>
-    <p>12 pcs</p>
-    <p class="price">৳19.99</p>
-    <button type="button"  data-bs-toggle="modal" data-bs-target="#details-modal"    class="btn btn-sm w-100 btn-details">Details</button>
-<div class=" d-flex gap-2   pb-3 ">
-<button class=" btn w-25">+</button>
-<button class=" btn bag-btn ">Add to bag</button>
-<button class=" btn w-25">-</button>
 </div>
-  </div>
-
-</div>
-
 
 <div class="col always-same--gap-card ">
-  <div class="card">
-    <img
-      src="/assets/Delete/eggg.png"
-      alt=""
-     
-    />
-    <h5 class="mt-2">Chicken Eggs</h5>
-    <p>12 pcs</p>
-    <p class="price">৳19.99</p>
-    <button type="button"  data-bs-toggle="modal" data-bs-target="#details-modal"    class="btn btn-sm w-100 btn-details">Details</button>
+<div class="card">
+  <img
+    src="/assets/Delete/eggg.png"
+    alt=""
+   
+  />
+  <h5 class="mt-2">Chicken Eggs</h5>
+  <p>12 pcs</p>
+  <p class="price">৳19.99</p>
+  <button type="button"  data-bs-toggle="modal" data-bs-target="#details-modal"    class="btn btn-sm w-100 btn-details">Details</button>
 <div class=" d-flex gap-2   pb-3 ">
 <button class=" btn w-25">+</button>
 <button class=" btn bag-btn ">Add to bag</button>
 <button class=" btn w-25">-</button>
 </div>
-  </div>
+</div>
 
 </div>
-            </div>
+
+
+<div class="col always-same--gap-card ">
+<div class="card">
+  <img
+    src="/assets/Delete/eggg.png"
+    alt=""
+   
+  />
+  <h5 class="mt-2">Chicken Eggs</h5>
+  <p>12 pcs</p>
+  <p class="price">৳19.99</p>
+  <button type="button"  data-bs-toggle="modal" data-bs-target="#details-modal"    class="btn btn-sm w-100 btn-details">Details</button>
+<div class=" d-flex gap-2   pb-3 ">
+<button class=" btn w-25">+</button>
+<button class=" btn bag-btn ">Add to bag</button>
+<button class=" btn w-25">-</button>
+</div>
+</div>
+
+</div>
           </div>
-
-          <h1 class="Heading-p">Food</h1>
-
-          <div class="row row-cols-2 row-cols-md-5 always-same--gap">
-            <div class="cols">
-              <a href="#">
-                <img
-                  class="img-fluid"
-                  src="/assets/Delete/fruitsa.png"
-                  alt=""
-                />
-                <a class="text-dark text-center obj-a" href="/html/sub-category.html"
-                  >Fruits and Vegatables</a
-                >
-              </a>
-            </div>
-            <div class="cols">
-              <a href="#">
-                <img
-                  class="img-fluid"
-                  src="/assets/Delete/fruitsa.png"
-                  alt=""
-                />
-                <a class="text-dark text-center obj-a" href="/html/sub-category.html"
-                  >Fruits and Vegatables</a
-                >
-              </a>
-            </div>
-            <div class="cols">
-              <a href="#">
-                <img
-                  class="img-fluid"
-                  src="/assets/Delete/fruitsa.png"
-                  alt=""
-                />
-                <a class="text-dark text-center obj-a" href="/html/sub-category.html"
-                  >Fruits and Vegatables</a
-                >
-              </a>
-            </div>
-            <div class="cols">
-              <a href="#">
-                <img
-                  class="img-fluid"
-                  src="/assets/Delete/fruitsa.png"
-                  alt=""
-                />
-                <a class="text-dark text-center obj-a" href="/html/sub-category.html"
-                  >Fruits and Vegatables</a
-                >
-              </a>
-            </div>
-            <div class="cols">
-              <a href="#">
-                <img
-                  class="img-fluid"
-                  src="/assets/Delete/fruitsa.png"
-                  alt=""
-                />
-                <a class="text-dark text-center obj-a" href="/html/sub-category.html"
-                  >Fruits and Vegatables</a
-                >
-              </a>
-            </div>
-            <div class="cols">
-              <a href="#">
-                <img
-                  class="img-fluid"
-                  src="/assets/Delete/fruitsa.png"
-                  alt=""
-                />
-                <a class="text-dark text-center obj-a" href="/html/sub-category.html"
-                  >Fruits and Vegatables</a
-                >
-              </a>
-            </div>
-            <div class="cols">
-              <a href="#">
-                <img
-                  class="img-fluid"
-                  src="/assets/Delete/fruitsa.png"
-                  alt=""
-                />
-                <a class="text-dark text-center obj-a" href="/html/sub-category.html"
-                  >Fruits and Vegatables</a
-                >
-              </a>
-            </div>
-          </div>
-        </main>
+       
       </div>
     </div>
-   
-    
     <script src="/plugins/bootrsap/js/bootstrap.bundle.min.js"></script>
-   
     <script src="/js/script.js"></script>
   </body>
 </html>
