@@ -1,4 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@font-face {
+    font-family: 'Segoe UI';
+    src: local('Segoe UI'), local('SegoeUI'),
+         url('/plugins/Seogoe\ ui\ font/SegoeUI-Light.woff2') format('woff2'), /* Modern Browsers */
+         url('/plugins/Seogoe\ ui\ font/SegoeUI-Light.woff') format('woff'); /* Older Browsers */
+}
+
+/* Apply Segoe UI font family to the entire document */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
 
 *,
 ::after,
@@ -7,14 +20,14 @@
 }
 
 
-body {
+/* body {
     font-family: 'Poppins', sans-serif;
     font-size: 0.875rem;
     opacity: 1;
     overflow-y: scroll;
     margin: 0;
     overflow: hidden;
-}
+} */
 
 a {
     cursor: pointer;
@@ -363,38 +376,92 @@ input[type=text] {
     padding-bottom: 20px;
 }
 
+
+/* card design */
+
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background-color: #FDD670;
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-}
-
-.price {
-  color: #133168;
-  font-size: 22px;
-}
-
-.card button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-.card button:hover {
-  opacity: 0.7;
-}
-.card h5,p{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fdfcf8;
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+    position: relative; /* Added */
+    transition: opacity 0.3s ease; /* Added */
+  }
+  
+  .card:hover {
+    opacity: 0.8; /* Adjust the opacity value as needed */
+  }
+  
+  .price {
+    color: #133168;
+    font-size: 22px;
+  }
+  
+  .card img {
+    width: 50%; /* Adjust image width as needed */
+  }
+  
+  .card button {
+    border: 1px solid rgb(0, 0, 0);
+    outline: 0;
+    /* padding: 12px; */
+    color: rgb(255, 255, 255);
+    background-color: #6c0202;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px; /* Added */
+  }
+  
+  .bag-btn {
+    width: 130px;
+  }
+  
+  /* For PC devices */
+  .bag-btn {
+    width: 130px;
+  }
+  
+  /* For responsive design */
+  @media only screen and (max-width: 768px) {
+    /* Adjust width for smaller devices */
+    .bag-btn {
+      width: 100px; /* Adjust as needed */
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    /* Further adjust width for even smaller devices */
+    .bag-btn {
+      width: 80px; /* Adjust as needed */
+    }
+  }
+  
+  .card button:hover {
+    background-color: #cf0707;
+  }
+  
+  .card h5,
+  p {
     color: black;
-}
-.always-same--gap{
+  }
+  
+  .always-same--gap {
     margin-bottom: 100px;
+  }
+  
+  .always-same--gap-card {
+    margin-bottom: 10px;
+  }
+  
+
+  .btn-details {
+    background-color: #f1f1f1 !important;
+    color: #000000 !important;
 }
