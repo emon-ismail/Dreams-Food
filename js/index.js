@@ -16,6 +16,9 @@ function closeNav() {
   document.getElementById("mySidepanel").style.width = "0";
 }
 
+
+
+
    // Get a reference to the button
    const placeOrderBtn = document.getElementById('placeOrderBtn');
 
