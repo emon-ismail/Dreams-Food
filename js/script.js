@@ -13,5 +13,18 @@ sidebarToggle.addEventListener("click",function(){
       Swal.fire("Order Placed!", "Your order has been successfully placed.", "success");
     });
   });
+//  login with email hidden to visible
+  const loginWithEmailBtn = document.getElementById('loginWithEmailBtn');
+  const emailLoginForm = document.getElementById('emailLoginForm');
 
-  
+  loginWithEmailBtn.addEventListener('click', function() {
+    emailLoginForm.classList.toggle('hidden');
+  });
+
+
+  // const loginWithEmailBtn = document.getElementById('loginWithEmailBtn');
+const phoneNumberContainer = document.getElementById('phoneNumberContainer');
+
+loginWithEmailBtn.addEventListener('click', function() {
+  phoneNumberContainer.classList.toggle('hidden');
+});
