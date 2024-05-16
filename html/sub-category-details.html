@@ -1,715 +1,716 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="/js/index.js"></script>
-    <title>Dreams Food</title>
 
-    <link rel="stylesheet" href="/plugins/bootrsap/css/bootstrap.min.css" />
-    <script src="/plugins/sweet alert/js/sweetAlert.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="/js/index.js"></script>
+  <title>Dreams Food</title>
 
-    <script src="/plugins/fontawosome/js/Fontawesome.js"></script>
-    <link rel="stylesheet" href="/css/style.css" />
-  </head>
+  <link rel="stylesheet" href="/plugins/bootrsap/css/bootstrap.min.css" />
 
-  <body>
-    <section>
-      <nav class="navbar navbar-expand border-bottom">
+  <script src="/plugins/fontawosome/js/Fontawesome.js"></script>
+
+</head>
+<script src="/plugins/sweet alert/js/sweetAlert.js"></script>
+<link rel="stylesheet" href="/css/style.css" />
+
+</head>
+
+<body>
+  <section>
+
+    <!-- Modal   start login page-->
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content bg-light text-dark">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+            <button type="button" class="custom-close-button btn" data-bs-dismiss="modal" aria-label="Close">❌</button>
+
+
+
+          </div>
+          <div class="modal-body">
+            <div class="d-grid gap-4">
+              <button class="btn btn-primary p-3" type="button">Sign up or Login with Facebook</button>
+              <button id="loginWithEmailBtn" class="btn btn-warning p-3" type="button">Login with Email</button>
+            </div>
+
+            <form id="emailLoginForm" class="hidden">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+
+
+            </form>
+
+
+
+            <div id="phoneNumberContainer" class="">
+              <label for="exampleFormControlInput3" class="pt-5 pb-2">PLEASE ENTER YOUR MOBILE PHONE NUMBER</label>
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1">+88</span>
+                <input type="tel" class="form-control text-dark" id="exampleFormControlInput3" maxlength="10"
+                  placeholder="e.g. +8801672955886" pattern="\+8801[0-9]{9}">
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Sign up/ Login</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal end for login -->
+
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand border-bottom">
+      <div class="navbar-collapse navbar">
         <div class="sidebar-logo">
-          <a href="/html/index.html">Dreams Food</a>
+          <a href="#">Dreams Food</a>
         </div>
         <button class="btn" id="sidebar-toggle" type="button">
           <img class="navbar-toggler-icon" src="/assets/image/ham.svg" alt="" />
         </button>
-        <form class="ms-5">
-          <input type="text" name="search" placeholder="Search.." />
-        </form>
-        <div class="navbar-collapse navbar">
-          <ul class="navbar-nav">
+        <ul class="navbar-nav mx-auto flex-column flex-md-row-reverse  gap-3  ">
+
+          <div class="d-flex flex-md-row-reverse">
             <li>
-              
-<!-- Button trigger modal -->
-              <button type="button"  data-bs-toggle="modal" 
-              data-bs-target="#exampleModal" class="btn  w-100 mt-2 text-white" style="margin-right: 0px;
-              background-color: #FF686E;" >
-                LogIn
+
+              <!-- Button trigger modal -->
+
+              <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                class="btn login-btn ms-5  w-75   text-white">
+                Login
               </button>
 
 
+            </li>
 
 
-<!-- Modal -->
-<div class="modal fade "  id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content bg-light text-dark">
-      <div class="modal-header">
-        <h5 class="modal-title"  id="exampleModalLabel">Login</h5>
-        <button type="button" class="custom-close-button btn" data-bs-dismiss="modal" aria-label="Close">❌</button>
+            <li class="ms-5">
+              <p class="fa-solid fa-location icon-location"></p>
+              <select class="js-select2 ">
+                <option>Chittagong</option>
+                <option>Dhaka</option>
+                <option>Comilla</option>
 
-
-
-      </div>
-      <div class="modal-body">
-        <div class="d-grid gap-4">
-          <button class="btn btn-primary p-3" type="button">Sign up or Login with Facebook</button>
-          <button class="btn btn-warning p-3" type="button">Login with Email</button>
-        </div>
-        <div class="form-group">
-         
-          <label for="exampleFormControlInput3 " class="pt-5 pb-2">PLEASE ENTER YOUR MOBILE PHONE NUMBER
-          </label>
-              <div class="input-group">
-                 <span class="input-group-text" id="basic-addon1">+88</span>
-                     <input type="tel" class="form-control  text-light" id="exampleFormControlInput3" maxlength="10" placeholder="e.g. +8801672955886" pattern="\+8801[0-9]{9}">
-              </div> 
-       </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Sign up/ Login</button>
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
+              </select>
 
             </li>
-            <li class="cart-container container">
-              <div class="d-flex align-content-between">
-                <button
-                  style="margin-right: 150px"
-                  class="openbtn btn position-relative"
-                  onclick="openNav()"
-                  href="#"
-                >
-                  <img class="cart" src="/assets/image/bag-1.png" alt="" /><span
-                    class="position-absolute top-0 start-100 translate-middle badge rounded-2 bg-dark mt-2 h2 text-light"
-                    >99</span
-                  >
-                </button>
+          </div>
+          <li>
+            <form class="ms-5">
+              <input class="input-search-btn" type="text" name="search" placeholder="Search.." />
+            </form>
+          </li>
+
+
+
+
+        </ul>
+        <div class="sidecart text-dark  text-center bg-dark">
+
+          <ul class="nav flex-column">
+            <div class="d-flex justify-content-between container bg-light py-3">
+              <div>
+                <h4 class="text-dark sidecart-header"> <span class="fa-solid fa-bag-shopping "></span> 11 ITEMS</h4>
+              </div>
+              <div class="text-light h4 m-0 px-4 text-center">
+                <!-- Close -->
+                <div class="d-inline" onclick="toggleCart()"><i
+                    class="far text-success float-right fa-arrow-alt-circle-right mt-1"></i></div>
+              </div>
+            </div>
+
+            <li class="nav-link d-flex flex-wrap flex-row mt-1 sidecart-card">
+              <div class="d-flex justify-content-evenly my-1">
+                <div>
+                  <button class="btn btn-outline-success mb-2">+</button>
+                  <br />
+                  <button class="btn btn-outline-danger">-</button>
+                </div>
+
+                <img class="cart-added-img w-25 rounded-3" src="/assets/Delete/eggg.png" alt="" />
+
+                <div>
+                  <p class="cart-added-name">Chaldal Premium Pangas Fish Headless and Deshi Roshun (Combo)</p>
+                  <p class="cart-added-individual-price">৳9 / 12 pcs</p>
+                </div>
+                <div>
+                  <p class="text-danger">৳ 108</p>
+                  <p class="text-decoration-line-through">৳ 120</p>
+                </div>
+                <button class="btn"><i class="fa-solid fa-times text-dark"></i></button>
               </div>
             </li>
+
+            <li class="nav-link d-flex flex-wrap flex-row mt-1 sidecart-card">
+              <div class="d-flex justify-content-evenly my-1">
+                <div>
+                  <button class="btn btn-outline-success mb-2">+</button>
+                  <br />
+                  <button class="btn btn-outline-danger">-</button>
+                </div>
+
+                <img class="cart-added-img w-25 rounded-3" src="/assets/Delete/eggg.png" alt="" />
+
+                <div>
+                  <p class="cart-added-name">Chaldal Premium Pangas Fish Headless and Deshi Roshun (Combo)</p>
+                  <p class="cart-added-individual-price">৳9 / 12 pcs</p>
+                </div>
+                <div>
+                  <p class="text-danger">৳ 108</p>
+                  <p class="text-decoration-line-through">৳ 120</p>
+                </div>
+                <button class="btn"><i class="fa-solid fa-times text-dark"></i></button>
+              </div>
+            </li>
+
+            <li class="nav-link d-flex flex-wrap flex-row mt-1 sidecart-card">
+              <div class="d-flex justify-content-evenly my-1">
+                <div>
+                  <button class="btn btn-outline-success mb-2">+</button>
+                  <br />
+                  <button class="btn btn-outline-danger">-</button>
+                </div>
+
+                <img class="cart-added-img w-25 rounded-3" src="/assets/Delete/eggg.png" alt="" />
+
+                <div>
+                  <p class="cart-added-name">Chaldal Premium Pangas Fish Headless and Deshi Roshun (Combo)</p>
+                  <p class="cart-added-individual-price">৳9 / 12 pcs</p>
+                </div>
+                <div>
+                  <p class="text-danger">৳ 108</p>
+                  <p class="text-decoration-line-through">৳ 120</p>
+                </div>
+                <button class="btn"><i class="fa-solid fa-times text-dark"></i></button>
+              </div>
+            </li>
+            <li class="nav-link d-flex flex-wrap flex-row mt-1 sidecart-card">
+              <div class="d-flex justify-content-evenly my-1">
+                <div>
+                  <button class="btn btn-outline-success mb-2">+</button>
+                  <br />
+                  <button class="btn btn-outline-danger">-</button>
+                </div>
+
+                <img class="cart-added-img  rounded-3" src="/assets/Delete/eggg.png" alt="" />
+
+                <div>
+                  <p class="cart-added-name">Chaldal Premium Pangas Fish Headless and Deshi Roshun (Combo)</p>
+                  <p class="cart-added-individual-price">৳9 / 12 pcs</p>
+                </div>
+                <div>
+                  <p class="text-danger">৳ 108</p>
+                  <p class="text-decoration-line-through">৳ 120</p>
+                </div>
+                <button class="btn"><i class="fa-solid fa-times text-dark"></i></button>
+              </div>
+            </li>
+
+
           </ul>
 
-          <div id="mySidepanel" class="sidepanel">
-            <div class="d-flex p-2 mb-3">
-              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-                ><button class="btn btn-outline-danger">Close</button></a
-              >
-            </div>
 
-            <div class="d-flex justify-content-evenly my-3">
-              <div>
-                <button class="btn btn-outline-success mb-2">+</button>
-                <br />
-                <button class="btn btn-outline-danger">-</button>
-              </div>
-
-              <img
-                class="cart-added-img w-25 rounded-3"
-                src="/assets/Delete/eggg.png"
-                alt=""
-              />
-
-              <div>
-                <p class="cart-added-name">Eggs</p>
-                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-              </div>
-              <div>
-                <p class="text-danger">৳ 108</p>
-                <p class="text-decoration-line-through">৳ 120</p>
-              </div>
-              <button class="btn">❌</button>
-            </div>
-            <div class="d-flex justify-content-evenly my-3">
-              <div>
-                <button class="btn btn-outline-success mb-2">+</button>
-                <br />
-                <button class="btn btn-outline-danger">-</button>
-              </div>
-
-              <img
-                class="cart-added-img w-25 rounded-3"
-                src="/assets/Delete/eggg.png"
-                alt=""
-              />
-
-              <div>
-                <p class="cart-added-name">Eggs</p>
-                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-              </div>
-              <div>
-                <p class="text-danger">৳ 108</p>
-                <p class="text-decoration-line-through">৳ 120</p>
-              </div>
-              <button class="btn">❌</button>
-            </div>
-            <div class="d-flex justify-content-evenly my-3">
-              <div>
-                <button class="btn btn-outline-success mb-2">+</button>
-                <br />
-                <button class="btn btn-outline-danger">-</button>
-              </div>
-
-              <img
-                class="cart-added-img w-25 rounded-3"
-                src="/assets/Delete/eggg.png"
-                alt=""
-              />
-
-              <div>
-                <p class="cart-added-name">Eggs</p>
-                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-              </div>
-              <div>
-                <p class="text-danger">৳ 108</p>
-                <p class="text-decoration-line-through">৳ 120</p>
-              </div>
-              <button class="btn">❌</button>
-            </div>
-            <div class="d-flex justify-content-evenly my-3">
-              <div>
-                <button class="btn btn-outline-success mb-2">+</button>
-                <br />
-                <button class="btn btn-outline-danger">-</button>
-              </div>
-
-              <img
-                class="cart-added-img w-25 rounded-3"
-                src="/assets/Delete/eggg.png"
-                alt=""
-              />
-
-              <div>
-                <p class="cart-added-name">Eggs</p>
-                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-              </div>
-              <div>
-                <p class="text-danger">৳ 108</p>
-                <p class="text-decoration-line-through">৳ 120</p>
-              </div>
-              <button class="btn">❌</button>
-            </div>
-            <div class="d-flex justify-content-evenly my-3">
-              <div>
-                <button class="btn btn-outline-success mb-2">+</button>
-                <br />
-                <button class="btn btn-outline-danger">-</button>
-              </div>
-
-              <img
-                class="cart-added-img w-25 rounded-3"
-                src="/assets/Delete/eggg.png"
-                alt=""
-              />
-
-              <div>
-                <p class="cart-added-name">Eggs</p>
-                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-              </div>
-              <div>
-                <p class="text-danger">৳ 108</p>
-                <p class="text-decoration-line-through">৳ 120</p>
-              </div>
-              <button class="btn">❌</button>
-            </div>
-            <div class="d-flex justify-content-evenly my-3">
-              <div>
-                <button class="btn btn-outline-success mb-2">+</button>
-                <br />
-                <button class="btn btn-outline-danger">-</button>
-              </div>
-
-              <img
-                class="cart-added-img w-25 rounded-3"
-                src="/assets/Delete/eggg.png"
-                alt=""
-              />
-
-              <div>
-                <p class="cart-added-name">Eggs</p>
-                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-              </div>
-              <div>
-                <p class="text-danger">৳ 108</p>
-                <p class="text-decoration-line-through">৳ 120</p>
-              </div>
-              <button class="btn">❌</button>
-            </div>
-            <div class="d-flex justify-content-evenly my-3">
-              <div>
-                <button class="btn btn-outline-success mb-2">+</button>
-                <br />
-                <button class="btn btn-outline-danger">-</button>
-              </div>
-
-              <img
-                class="cart-added-img w-25 rounded-3"
-                src="/assets/Delete/eggg.png"
-                alt=""
-              />
-
-              <div>
-                <p class="cart-added-name">Eggs</p>
-                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-              </div>
-              <div>
-                <p class="text-danger">৳ 108</p>
-                <p class="text-decoration-line-through">৳ 120</p>
-              </div>
-              <button class="btn">❌</button>
-            </div>
-            <div class="d-flex justify-content-evenly my-3">
-              <div>
-                <button class="btn btn-outline-success mb-2">+</button>
-                <br />
-                <button class="btn btn-outline-danger">-</button>
-              </div>
-
-              <img
-                class="cart-added-img w-25 rounded-3"
-                src="/assets/Delete/eggg.png"
-                alt=""
-              />
-
-              <div>
-                <p class="cart-added-name">Eggs</p>
-                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-              </div>
-              <div>
-                <p class="text-danger">৳ 108</p>
-                <p class="text-decoration-line-through">৳ 120</p>
-              </div>
-              <button class="btn">❌</button>
-            </div>
-            <div class="d-flex justify-content-evenly my-3">
-              <div>
-                <button class="btn btn-outline-success mb-2">+</button>
-                <br />
-                <button class="btn btn-outline-danger">-</button>
-              </div>
-
-              <img
-                class="cart-added-img w-25 rounded-3"
-                src="/assets/Delete/eggg.png"
-                alt=""
-              />
-
-              <div>
-                <p class="cart-added-name">Eggs</p>
-                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-              </div>
-              <div>
-                <p class="text-danger">৳ 108</p>
-                <p class="text-decoration-line-through">৳ 120</p>
-              </div>
-              <button class="btn">❌</button>
-            </div>
-            <div class="d-flex justify-content-evenly my-3">
-              <div>
-                <button class="btn btn-outline-success mb-2">+</button>
-                <br />
-                <button class="btn btn-outline-danger">-</button>
-              </div>
-
-              <img
-                class="cart-added-img w-25 rounded-3"
-                src="/assets/Delete/eggg.png"
-                alt=""
-              />
-
-              <div>
-                <p class="cart-added-name">Eggs</p>
-                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-              </div>
-              <div>
-                <p class="text-danger">৳ 108</p>
-                <p class="text-decoration-line-through">৳ 120</p>
-              </div>
-              <button class="btn">❌</button>
-            </div>
-            <div class="d-flex justify-content-evenly my-3">
-              <div>
-                <button class="btn btn-outline-success mb-2">+</button>
-                <br />
-                <button class="btn btn-outline-danger">-</button>
-              </div>
-
-              <img
-                class="cart-added-img w-25 rounded-3"
-                src="/assets/Delete/eggg.png"
-                alt=""
-              />
-
-              <div>
-                <p class="cart-added-name">Eggs</p>
-                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-              </div>
-              <div>
-                <p class="text-danger">৳ 108</p>
-                <p class="text-decoration-line-through">৳ 120</p>
-              </div>
-              <button class="btn">❌</button>
-            </div>
-            <div class="d-flex justify-content-evenly my-3">
-              <div>
-                <button class="btn btn-outline-success mb-2">+</button>
-                <br />
-                <button class="btn btn-outline-danger">-</button>
-              </div>
-
-              <img
-                class="cart-added-img w-25 rounded-3"
-                src="/assets/Delete/eggg.png"
-                alt=""
-              />
-
-              <div>
-                <p class="cart-added-name">Eggs</p>
-                <p class="cart-added-individual-price">৳9 / 12 pcs</p>
-              </div>
-              <div>
-                <p class="text-danger">৳ 108</p>
-                <p class="text-decoration-line-through">৳ 120</p>
-              </div>
-              <button class="btn">❌</button>
-            </div>
-
-            <div class="d-flex justify-content-between container py-5 mx-auto">
-                <button id="placeOrderBtn" class="btn btn-success">Place Order</button>
-              <p class="total ">Total:   <span> ৳200</span></p>
-            </div>
+          <div class="bg-light py-2">
+            <div class="text-light h5 text-left mx-3 text-black ">Total Amount: <span class="text-danger"
+                id="sidecart-total">৳ 7.220,00</span></div>
+          </div>
+          <div class="p-2">
+            <button type="button" id="placeOrderBtn" class="btn btn-success w-100">Place Order</button>
           </div>
         </div>
-      </nav>
-    </section>
-    <div class="wrapper">
-      <aside id="sidebar" class="js-sidebar">
-        <!-- Content For Sidebar -->
-        <div class="h-100">
-          <div class="sidebar-logo">
-            
-            <div class="d-flex justify-content-evenly gap-2">
-              <button
-                class="btn btn-outline-success btn-sm"
-                style="font-size: 12px"
-              >
-                Grocery
-              </button>
-              <button
-                class="btn btn-outline-success btn-sm"
-                style="font-size: 12px"
-              >
-                Pharmacy
-              </button>
-              <button
-                class="btn btn-outline-success btn-sm"
-                style="font-size: 12px"
-              >
-                Cookups
-              </button>
-            </div>
+
+      </div>
+    </nav>
+
+    <!-- navbar end -->
+  </section>
+
+
+  <!-- cart panel -->
+
+
+
+  <div class="wrapper">
+    <!-- left sidebar start -->
+    <aside id="sidebar" class="js-sidebar">
+      <!-- Content For Sidebar -->
+      <div class="h-100">
+        <div class="sidebar-logo">
+
+          <div class="d-flex justify-content-evenly gap-2">
+            <button class="btn btn-outline-success btn-sm" style="font-size: 12px">
+              Grocery
+            </button>
+            <button class="btn btn-outline-success btn-sm" style="font-size: 12px">
+              Pharmacy
+            </button>
+            <button class="btn btn-outline-success btn-sm" style="font-size: 12px">
+              Cookups
+            </button>
           </div>
-          <ul class="sidebar-nav">
-            <li class="sidebar-item">
-              <a href="#" class="sidebar-link">
-                <i class="fa-solid fa-list pe-2"></i>
-                Offers
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a href="#" class="sidebar-link">
-                <i class="fa-solid fa-bolt pe-2 sidebar-icon"></i>
+        </div>
+        <ul class="sidebar-nav">
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="fa-solid fa-list pe-2"></i>
+              Offers
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="fa-solid fa-bolt pe-2 sidebar-icon"></i>
               Flash Sales
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a href="#" class="sidebar-link">
-                <i class="fa-solid fa-fire pe-2 sidebar-icon"></i>
-       Popular
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a href="#" class="sidebar-link">
-                <i class="fa-solid fa-heart pe-2 sidebar-icon"></i>
-                Favourites
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a
-                href="#"
-                class="sidebar-link collapsed"
-                data-bs-target="#pages"
-                data-bs-toggle="collapse"
-                aria-expanded="false"
-                ><i class="fa-solid fa-baby pe-2 sidebar-icon"></i>
-            Baby Care
-              </a>
-              <ul
-                id="pages"
-                class="sidebar-dropdown list-unstyled collapse"
-                data-bs-parent="#sidebar"
-              >
-                <li class="sidebar-item">
-                  <a href="page1.html" class="sidebar-link">Page 1</a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="page2.html" class="sidebar-link">Page 2</a>
-                </li>
-              </ul>
-            </li>
-            <li class="sidebar-item">
-              <a
-                href="#"
-                class="sidebar-link collapsed"
-                data-bs-target="#posts"
-                data-bs-toggle="collapse"
-                aria-expanded="false"
-                ><i class="fa-solid fa-utensils pe-2 sidebar-icon " ></i>
-                <!-- <i class="fa-regular fa-burger pe-2" style="color: #cf0707;"></i> -->
-                Food
-              </a>
-              <ul
-                id="posts"
-                class="sidebar-dropdown list-unstyled collapse"
-                data-bs-parent="#sidebar"
-              >
-                <li class="sidebar-item">
-                  <a href="#" class="sidebar-link">Fresh Vegatables</a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#" class="sidebar-link">Post 2</a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#" class="sidebar-link">Post 3</a>
-                </li>
-              </ul>
-            </li>
-
-          
-
-        
-
-           
-
-            <li class="sidebar-item">
-              <a
-                href="#"
-                class="sidebar-link collapsed"
-                data-bs-target="#multi"
-                data-bs-toggle="collapse"
-                aria-expanded="false"
-                ><i class="fa-solid fa-fish pe-2 sidebar-icon "></i>
-                Meat & Fish
-              </a>
-              <ul
-                id="multi"
-                class="sidebar-dropdown list-unstyled collapse"
-                data-bs-parent="#sidebar"
-              >
-                <li class="sidebar-item">
-                  <a
-                    href="#"
-                    class="sidebar-link collapsed"
-                    data-bs-target="#level-1"
-                    data-bs-toggle="collapse"
-                    aria-expanded="false"
-                    >Frozen Fish</a
-                  >
-                  <ul
-                    id="level-1"
-                    class="sidebar-dropdown list-unstyled collapse"
-                  >
-                    <li class="sidebar-item">
-                      <a href="#" class="sidebar-link">Level 1.1</a>
-                    </li>
-                    <li class="sidebar-item">
-                      <a href="#" class="sidebar-link">Level 1.2</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link">
-                  <i class="fa-solid fa-gamepad pe-2 sidebar-icon"></i>
-             Toys & Sports
-                </a>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="fa-solid fa-fire pe-2 sidebar-icon"></i>
+              Popular
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="fa-solid fa-heart pe-2 sidebar-icon"></i>
+              Favourites
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"
+              aria-expanded="false"><i class="fa-solid fa-baby pe-2 sidebar-icon"></i>
+              Baby Care
+            </a>
+            <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+              <li class="sidebar-item">
+                <a href="page1.html" class="sidebar-link">Page 1</a>
               </li>
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link">
-                  <i class="fa-solid fa-wand-sparkles pe-2 sidebar-icon"></i>
-           Beauty & MakeUp
-                </a>
+              <li class="sidebar-item">
+                <a href="page2.html" class="sidebar-link">Page 2</a>
               </li>
-          </ul>
-        </div>
-      </aside>
-      <div class="main ">
-        <div class="row row-cols-2 row-cols-md-5 card-main mt-5">
-            <div class="col always-same--gap-card  ">
-              <div class="card">
-                <img
-                  src="/assets/Delete/eggg.png"
-                  alt=""
-                 
-                />
-                <h5 class="mt-2">Chicken Eggs</h5>
-                <p>12 pcs</p>
-                <p class="price">৳19.99</p>
-                <button type="button"  data-bs-toggle="modal" data-bs-target="#details-modal"    class="btn btn-sm w-100 btn-details">Details</button>
-<div class=" d-flex gap-2   pb-3 ">
-<button class=" btn w-25">+</button>
-      <button class=" btn bag-btn ">Add to bag</button>
-      <button class=" btn w-25">-</button>
-</div>
+            </ul>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
+              aria-expanded="false"><i class="fa-solid fa-utensils pe-2 sidebar-icon "></i>
+              <!-- <i class="fa-regular fa-burger pe-2" style="color: #cf0707;"></i> -->
+              Food
+            </a>
+            <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+              <li class="sidebar-item">
+                <a href="/html/sub-category-details.html" class="sidebar-link">Fresh Vegatables</a>
+              </li>
+              <li class="sidebar-item">
+                <a href="/html/sub-category-details.html" class="sidebar-link">Dates(Khejur)</a>
+              </li>
+              <li class="sidebar-item">
+                <a href="/html/sub-category-details.html" class="sidebar-link">Fruits and Vegatables</a>
+              </li>
+            </ul>
+          </li>
+
+
+
+
+
+
+
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link collapsed" data-bs-target="#multi" data-bs-toggle="collapse"
+              aria-expanded="false"><i class="fa-solid fa-fish pe-2 sidebar-icon "></i>
+              Meat & Fish
+            </a>
+            <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+              <li class="sidebar-item">
+                <a href="#" class="sidebar-link collapsed" data-bs-target="#level-1" data-bs-toggle="collapse"
+                  aria-expanded="false">Frozen Fish</a>
+                <ul id="level-1" class="sidebar-dropdown list-unstyled collapse">
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Level 1.1</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Level 1.2</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="fa-solid fa-gamepad pe-2 sidebar-icon"></i>
+              Toys & Sports
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="fa-solid fa-wand-sparkles pe-2 sidebar-icon"></i>
+              Beauty & MakeUp
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <!-- left sidebar end -->
+    <!-- main content start -->
+    <div class="main   ">
+      <main class="content px-3 py-2   ">
+
+
+
+        <!-- card main start -->
+
+
+
+        <!-- Modal -->
+        <div class="modal fade " id="details-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-light text-dark">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Chicken Eggs (Layer)</h5>
+                <button type="button" class="custom-close-button btn" data-bs-dismiss="modal"
+                  aria-label="Close">❌</button>
               </div>
+              <div class="modal-body container ">
+                <div class=" row d-flex justify-content-evenly">
+                  <div class="col-5">
+                    <img class="img-fluid" src="/assets/Delete/eggg.png" alt="">
+                  </div>
+                  <div class="col-7">
+                    <p>Chicken Eggs (Layer)</p>
+                    <p>12 pcs</p>
+                    <p>৳
+                      129</p>
+                    <div class=" d-flex gap-2   pb-3 ">
+                      <button class=" btn w-25 btn-success  ">+</button>
+                      <input class=" btn bag-btn " placeholder="0"></input>
+                      <button class=" btn w-25 btn-danger">-</button>
+                    </div>
+                    <button class="btn btn-outline-success w-75">Buy Now</button>
+                    <hr class="hr" />
+                    <p>
+                      Weight without Box: 750 gm ±50 gm
+
+                      Weight with Box: 830 gm ±50 gm
+
+                      Eggs are an all-natural source of high-quality protein and a number of other nutrients, all for 70
+                      calories an egg. 100% fresh and healthy.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- modal end for details -->
+
+        <div class="row">
+          <div class=" col-md-10">
+            <img class="img-fluid" src="/assets/Delete/Screenshot 2024-04-19 222523.png" alt="" />
+            <div>
+              <p class="mt-4 Heading-p">Flash Sales</p>
+              <!-- card start -->
+              <div class="row row-cols-2 row-cols-md-5 card-main">
+
+                <div class="col always-same--gap-card">
+                  <div class="card">
+                    <img class="img-fluid" src="/assets/Delete/goat meet.png" alt="" />
+                    <h5 class="mt-2">Bengal Meat Beef Bone In ± 50 gm</h5>
+                    <p>1 Kg</p>
+                    <div class="d-flex">
+                      <p class="price">৳1000</p>
+                      <p class="text-decoration-line-through">৳ 1200</p>
+                    </div>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#details-modal"
+                      class="btn btn-sm w-100 btn-details">Details</button>
+                    <div class="details">
+                      <h1 class="buy-now-text text-light mb-5">৳2000</h1>
+                      <div class="d-flex justify-content-center ">
+                        <button class="btn  bg-warning text-dark">+</button>
+                        <h4 class="mx-4 bg-warning p-2 rounded-2 text-dark">2</h4>
+                        <button class="btn  bg-warning text-dark">-</button>
+                      </div>
+
+                    </div>
+                    <div class="buttons d-flex gap-2 pb-3">
+                      <button class="btn ">+</button>
+                      <button class="btn bag-btn">Add to bag</button>
+                      <button class="btn ">-</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col always-same--gap-card">
+                  <div class="card">
+                    <img class="img-fluid" src="/assets/Delete/banana.png" alt="" />
+                    <h5 class="mt-2">Shagor Kola (Banana Sagor)</h5>
+                    <p>12 pcs</p>
+                    <p class="price">৳19</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#details-modal"
+                      class="btn btn-sm w-100 btn-details">Details</button>
+                    <div class="details">
+                      <h1 class="buy-now-text text-light mb-5">৳38</h1>
+                      <div class="d-flex justify-content-center ">
+                        <button class="btn  bg-warning text-dark">+</button>
+                        <h4 class="mx-4 bg-warning p-2 rounded-2 text-dark">2</h4>
+                        <button class="btn  bg-warning text-dark">-</button>
+                      </div>
+
+                    </div>
+                    <div class="buttons d-flex gap-2 pb-3">
+                      <button class="btn ">+</button>
+                      <button class="btn bag-btn">Add to bag</button>
+                      <button class="btn ">-</button>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+
+                <div class="col always-same--gap-card">
+                  <div class="card">
+                    <img class="img-fluid" src="/assets/Delete/goose-1.png" alt="" />
+                    <h5 class="mt-2">Goose</h5>
+                    <p>1 pcs</p>
+                    <div class="d-flex">
+                      <p class="price">৳800</p>
+                      <p class="text-decoration-line-through">৳ 1000</p>
+                    </div>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#details-modal"
+                      class="btn btn-sm w-100 btn-details">Details</button>
+                    <div class="details">
+                      <h1 class="buy-now-text text-light mb-5">৳38</h1>
+                      <div class="d-flex justify-content-center ">
+                        <button class="btn  bg-warning text-dark">+</button>
+                        <h4 class="mx-4 bg-warning p-2 rounded-2 text-dark">2</h4>
+                        <button class="btn  bg-warning text-dark">-</button>
+                      </div>
+
+                    </div>
+                    <div class="buttons d-flex gap-2 pb-3">
+                      <button class="btn ">+</button>
+                      <button class="btn bag-btn">Add to bag</button>
+                      <button class="btn ">-</button>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col always-same--gap-card">
+                  <div class="card">
+                    <img class="img-fluid" src="/assets/Delete/eggg.png" alt="" />
+                    <h5 class="mt-2">Chicken Eggs</h5>
+                    <p>12 pcs</p>
+                    <p class="price">৳19</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#details-modal"
+                      class="btn btn-sm w-100 btn-details">Details</button>
+                    <div class="details">
+                      <h1 class="buy-now-text text-light mb-5">৳38</h1>
+                      <div class="d-flex justify-content-center ">
+                        <button class="btn  bg-warning text-dark">+</button>
+                        <h4 class="mx-4 bg-warning p-2 rounded-2 text-dark">2</h4>
+                        <button class="btn  bg-warning text-dark">-</button>
+                      </div>
+
+                    </div>
+                    <div class="buttons d-flex gap-2 pb-3">
+                      <button class="btn ">+</button>
+                      <button class="btn bag-btn">Add to bag</button>
+                      <button class="btn ">-</button>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col always-same--gap-card">
+                  <div class="card">
+                    <img class="img-fluid" src="/assets/Delete/red meat.png" alt="" />
+                    <h5 class="mt-2">Red Meat</h5>
+                    <p>1 Kg</p>
+                    <p class="price">৳800</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#details-modal"
+                      class="btn btn-sm w-100 btn-details">Details</button>
+                    <div class="details">
+                      <h1 class="buy-now-text text-light mb-5">৳1600</h1>
+                      <div class="d-flex justify-content-center ">
+                        <button class="btn  bg-warning text-dark">+</button>
+                        <h4 class="mx-4 bg-warning p-2 rounded-2 text-dark">2</h4>
+                        <button class="btn  bg-warning text-dark">-</button>
+                      </div>
+
+                    </div>
+                    <div class="buttons d-flex gap-2 pb-3">
+                      <button class="btn ">+</button>
+                      <button class="btn bag-btn">Add to bag</button>
+                      <button class="btn ">-</button>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+
+
+                <div class="col always-same--gap-card">
+                  <div class="card">
+                    <img class="img-fluid" src="/assets/Delete/fish.png" alt="" />
+                    <h5 class="mt-2">Fish</h5>
+                    <p>1 kg</p>
+                    <p class="price">৳190</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#details-modal"
+                      class="btn btn-sm w-100 btn-details">Details</button>
+                    <div class="details">
+                      <h1 class="buy-now-text text-light mb-5">৳38</h1>
+                      <div class="d-flex justify-content-center ">
+                        <button class="btn  bg-warning text-dark">+</button>
+                        <h4 class="mx-4 bg-warning p-2 rounded-2 text-dark">2</h4>
+                        <button class="btn  bg-warning text-dark">-</button>
+                      </div>
+
+                    </div>
+                    <div class="buttons d-flex gap-2 pb-3">
+                      <button class="btn ">+</button>
+                      <button class="btn bag-btn">Add to bag</button>
+                      <button class="btn ">-</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col always-same--gap-card">
+                  <div class="card">
+                    <img class="img-fluid" src="/assets/Delete/chicken.png" alt="" />
+                    <h5 class="mt-2">Chicken</h5>
+                    <p>12 pcs</p>
+                    <p class="price">৳199</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#details-modal"
+                      class="btn btn-sm w-100 btn-details">Details</button>
+                    <div class="details">
+                      <h1 class="buy-now-text text-light mb-5">৳400</h1>
+                      <div class="d-flex justify-content-center ">
+                        <button class="btn  bg-warning text-dark">+</button>
+                        <h4 class="mx-4 bg-warning p-2 rounded-2 text-dark">2</h4>
+                        <button class="btn  bg-warning text-dark">-</button>
+                      </div>
+
+                    </div>
+                    <div class="buttons d-flex gap-2 pb-3">
+                      <button class="btn ">+</button>
+                      <button class="btn bag-btn">Add to bag</button>
+                      <button class="btn ">-</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+              <h1 class="Heading-p">Food</h1>
+              <div class="row row-cols-2 row-cols-md-5 always-same--gap">
+                <div class="cols">
+                  <a href="#">
+                    <img class="img-fluid" src="/assets/Delete/fruitsa.png" alt="" />
+                    <a class="text-dark text-center obj-a" href="/html/sub-category.html">Fruits and Vegatables</a>
+                  </a>
+                </div>
+                <div class="cols">
+                  <a href="#">
+                    <img class="img-fluid" src="/assets/Delete/fruitsa.png" alt="" />
+                    <a class="text-dark text-center obj-a" href="/html/sub-category.html">Fruits and Vegatables</a>
+                  </a>
+                </div>
+                <div class="cols">
+                  <a href="#">
+                    <img class="img-fluid" src="/assets/Delete/fruitsa.png" alt="" />
+                    <a class="text-dark text-center obj-a" href="/html/sub-category.html">Fruits and Vegatables</a>
+                  </a>
+                </div>
+                <div class="cols">
+                  <a href="#">
+                    <img class="img-fluid" src="/assets/Delete/fruitsa.png" alt="" />
+                    <a class="text-dark text-center obj-a" href="/html/sub-category.html">Fruits and Vegatables</a>
+                  </a>
+                </div>
+                <div class="cols">
+                  <a href="#">
+                    <img class="img-fluid" src="/assets/Delete/fruitsa.png" alt="" />
+                    <a class="text-dark text-center obj-a" href="/html/sub-category.html">Fruits and Vegatables</a>
+                  </a>
+                </div>
+                <div class="cols">
+                  <a href="#">
+                    <img class="img-fluid" src="/assets/Delete/fruitsa.png" alt="" />
+                    <a class="text-dark text-center obj-a" href="/html/sub-category.html">Fruits and Vegatables</a>
+                  </a>
+                </div>
+                <div class="cols">
+                  <a href="#">
+                    <img class="img-fluid" src="/assets/Delete/fruitsa.png" alt="" />
+                    <a class="text-dark text-center obj-a" href="/html/sub-category.html">Fruits and Vegatables</a>
+                  </a>
+                </div>
+              </div>
+
+
 
             </div>
 
-<!-- Modal -->
-<div class="modal fade "  id="details-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<div class="modal-dialog modal-lg">
-  <div class="modal-content bg-light text-dark">
-    <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLabel">Chicken Eggs (Layer)</h5>
-      <button type="button" class="custom-close-button btn" data-bs-dismiss="modal" aria-label="Close">❌</button>
+            <!-- right side bag -->
+            <div class="col-2 position-fixed " style="top: 40%; left: 92%;">
+              <li class="cart-container container">
+                <button style="background-color: antiquewhite;" class="openbtn btn position-relative  "
+                  onclick="toggleCart()" href="#">
+                  <img class="cart" src="/assets/image/bag-1.png" alt="" accordion />
+                  <p class="d-md-block d-none">13 Items</p>
+
+                  <span
+                    class=" d-md-none d-block position-absolute top-0 start-100 translate-middle badge rounded-2 bg-dark mt-2 h2 text-light">13</span>
+
+                  <div class="bg-black rounded-2">
+                    <p class="text-white text-center d-md-block d-none">৳ 1600</p>
+                  </div>
+                </button>
 
 
+              </li>
+            </div>
 
-    </div>
-    <div class="modal-body container ">
-    <div class=" row d-flex justify-content-evenly">
-      <div class="col-5">
-        <img class="img-fluid" src="/assets/Delete/eggg.png" alt="">
-      </div>
-      <div class="col-7">
-        <p>Chicken Eggs (Layer)</p>
-        <p>12 pcs</p>
-        <p>৳
-          129</p>
-          <div class=" d-flex gap-2   pb-3 ">
-            <button class=" btn w-25 btn-success  ">+</button>
-                  <input class=" btn bag-btn " placeholder="0"></input>
-                  <button class=" btn w-25 btn-danger">-</button>
 
-                  
-                  
           </div>
-          <button class="btn btn-outline-success w-75">Buy Now</button>
-          <hr class="hr" />
 
-          <p>
-            Weight without Box: 750 gm ±50 gm
 
-Weight with Box: 830 gm ±50 gm
+        </div>
 
-Eggs are an all-natural source of high-quality protein and a number of other nutrients, all for 70 calories an egg. 100% fresh and healthy.
-          </p>
-         
-          
-      </div>
+
+
+
+      </main>
+      <!-- main content end -->
     </div>
-     
-    </div>
-    
   </div>
-</div>
-</div>
-
-<!-- modal end for details -->
 
 
-<div class="col always-same--gap-card ">
-<div class="card">
-  <img
-    src="/assets/Delete/eggg.png"
-    alt=""
-   
-  />
-  <h5 class="mt-2">Chicken Eggs</h5>
-  <p>12 pcs</p>
-  <p class="price">৳19.99</p>
-  <button type="button"  data-bs-toggle="modal" data-bs-target="#details-modal"    class="btn btn-sm w-100 btn-details">Details</button>
-<div class=" d-flex gap-2   pb-3 ">
-<button class=" btn w-25">+</button>
-<button class=" btn bag-btn ">Add to bag</button>
-<button class=" btn w-25">-</button>
-</div>
-</div>
+  <script src="/plugins/bootrsap/js/bootstrap.bundle.min.js"></script>
 
-</div>
-<div class="col always-same--gap-card  ">
-<div class="card">
-  <img
-    src="/assets/Delete/eggg.png"
-    alt=""
-   
-  />
-  <h5 class="mt-2">Chicken Eggs</h5>
-  <p>12 pcs</p>
-  <p class="price">৳19.99</p>
-  <button type="button"  data-bs-toggle="modal" data-bs-target="#details-modal"    class="btn btn-sm w-100 btn-details">Details</button>
-<div class=" d-flex gap-2   pb-3 ">
-<button class=" btn w-25">+</button>
-<button class=" btn bag-btn ">Add to bag</button>
-<button class=" btn w-25">-</button>
-</div>
-</div>
+  <script src="/js/script.js"></script>
+</body>
 
-</div>
-
-<div class="col always-same--gap-card ">
-<div class="card">
-  <img
-    src="/assets/Delete/eggg.png"
-    alt=""
-   
-  />
-  <h5 class="mt-2">Chicken Eggs</h5>
-  <p>12 pcs</p>
-  <p class="price">৳19.99</p>
-  <button type="button"  data-bs-toggle="modal" data-bs-target="#details-modal"    class="btn btn-sm w-100 btn-details">Details</button>
-<div class=" d-flex gap-2   pb-3 ">
-<button class=" btn w-25">+</button>
-<button class=" btn bag-btn ">Add to bag</button>
-<button class=" btn w-25">-</button>
-</div>
-</div>
-
-</div>
-
-
-<div class="col always-same--gap-card ">
-<div class="card">
-  <img
-    src="/assets/Delete/eggg.png"
-    alt=""
-   
-  />
-  <h5 class="mt-2">Chicken Eggs</h5>
-  <p>12 pcs</p>
-  <p class="price">৳19.99</p>
-  <button type="button"  data-bs-toggle="modal" data-bs-target="#details-modal"    class="btn btn-sm w-100 btn-details">Details</button>
-<div class=" d-flex gap-2   pb-3 ">
-<button class=" btn w-25">+</button>
-<button class=" btn bag-btn ">Add to bag</button>
-<button class=" btn w-25">-</button>
-</div>
-</div>
-
-</div>
-          </div>
-       
-      </div>
-    </div>
-    <script src="/plugins/bootrsap/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/script.js"></script>
-  </body>
 </html>
